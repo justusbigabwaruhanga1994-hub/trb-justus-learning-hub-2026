@@ -1,223 +1,298 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Free educational resources, books, lesson notes and study materials from Tr B. Justus Education Hub.">
-<title>Tr B. Justus Education Hub</title>
-<style>
-:root{--navy:#123b70;--blue:#1768ac;--orange:#f07813;--pale:#eaf3ff;--peach:#fff0df;--ink:#17263c;--muted:#5c6a7d;--white:#fff;--line:#dbe4ef}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f7f9fc;line-height:1.55}
-a{color:inherit}.wrap{width:min(1160px,92%);margin:auto}
-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
-.logo{width:54px;height:54px;border:2px solid #e5b44e;border-radius:50%;display:grid;place-items:center;font-size:28px;background:#fff}
-.brand strong{display:block;font-size:clamp(17px,2.2vw,27px);line-height:1.05;letter-spacing:.5px}
-.brand small{font-weight:700;letter-spacing:2px;font-size:12px}
-nav{display:flex;align-items:center;gap:23px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:700;font-size:14px}nav a:hover{color:var(--orange)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:9px;border:0;background:var(--orange);color:white;font-weight:700;text-decoration:none;cursor:pointer}
-.btn.secondary{background:white;color:var(--navy);border:1.5px solid var(--navy)}.btn.blue{background:var(--navy)}.btn.small{padding:9px 13px;font-size:13px}
-.hero{padding:55px 0 34px;text-align:center;background:linear-gradient(125deg,#e6f1ff 0%,#f8fbff 65%,#ffead6 100%)}
-.eyebrow{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-h1{font-size:clamp(30px,4.5vw,54px);line-height:1.1;margin:10px auto 14px;color:var(--navy);max-width:950px}
-.hero p{font-size:clamp(16px,2vw,20px);max-width:850px;margin:0 auto 23px;color:#34465d}
-.slogan{font-weight:700;color:var(--navy);font-style:italic;margin:15px auto 24px}
-.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-section{padding:42px 0}.section-head{text-align:center;margin:0 auto 25px;max-width:760px}
-.section-head h2{font-size:clamp(25px,3vw,35px);color:var(--navy);margin:0 0 7px}.section-head p{margin:0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.feature{border-radius:16px;padding:25px;background:var(--pale);display:flex;gap:20px;align-items:flex-start;border:1px solid #d4e5fa}
-.feature:nth-child(2),.feature:nth-child(4){background:var(--peach);border-color:#f8dfc3}
-.feature-icon{width:68px;height:68px;flex:0 0 68px;border:1.5px solid var(--blue);border-radius:13px;display:grid;place-items:center;font-size:32px;background:#ffffff8a}
-.feature h3{margin:0 0 5px;font-size:22px;color:var(--navy)}.feature p{margin:0;color:#3e4c60}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
-input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cbd6e4;border-radius:9px;background:white;font:inherit;color:var(--ink)}
-.toolbar input{flex:1;min-width:200px}.toolbar select{width:auto;min-width:170px}
-.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.resource{background:white;border:1px solid var(--line);border-radius:13px;padding:18px;box-shadow:0 5px 18px #19385b0a;display:flex;flex-direction:column;gap:10px}
-.tag{align-self:flex-start;background:#e8f1ff;color:var(--navy);font-size:11px;font-weight:800;text-transform:uppercase;padding:5px 8px;border-radius:30px}
-.resource h3{margin:0;font-size:18px;color:var(--navy)}.resource p{margin:0;color:var(--muted);font-size:14px;flex:1}.resource-actions{display:flex;gap:8px;flex-wrap:wrap}
-.empty{padding:28px;text-align:center;border:1px dashed #b8c8dc;border-radius:12px;background:white;color:var(--muted);grid-column:1/-1}
-.qr-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
-.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:23px;box-shadow:0 5px 18px #19385b0a}
-.panel h3{margin:0 0 7px;color:var(--navy)}.panel p{color:var(--muted);margin-top:0}
-label{font-weight:700;font-size:13px;display:block;margin:12px 0 6px}
-.qr-result{min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#f7f9fc;border:1px dashed #cbd6e4;border-radius:12px;padding:18px;gap:12px}
-#qrcode img,#qrcode canvas{max-width:100%;height:auto!important}
-.notice{font-size:13px;background:#fff7e8;border-left:4px solid var(--orange);padding:12px 14px;border-radius:5px;color:#68451d}
-footer{background:var(--navy);color:white;padding:26px 0;margin-top:20px}
-.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.footer-inner p{margin:4px 0;color:#e0eaf6;font-size:13px}
-@media(max-width:800px){.nav{padding:13px 0;align-items:flex-start;flex-direction:column}nav{gap:13px}.grid,.qr-layout{grid-template-columns:1fr}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:38px}.feature{padding:19px}}
-@media(max-width:520px){.resource-grid{grid-template-columns:1fr}.feature{flex-direction:column;gap:12px}.feature-icon{width:56px;height:56px;flex-basis:56px}.toolbar select{width:100%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TR B. JUSTUS EDUCATION HUB</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #263449;
+      background: #f5f8fc;
+    }
+
+    header {
+      background: #103b70;
+      color: white;
+      padding: 20px 6%;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: #e7f0fc;
+    }
+
+    .tagline {
+      color: #1764a0;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #103b70;
+      font-size: clamp(29px, 5vw, 43px);
+      line-height: 1.25;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 5px;
+      border-radius: 5px;
+      background: #103b70;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #103b70;
+      border: 1px solid #103b70;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 10px;
+      border: 1px solid #e1e8f0;
+      box-shadow: 0 4px 14px rgba(16, 59, 112, 0.06);
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #103b70;
+      margin-bottom: 15px;
+      font-size: 27px;
+    }
+
+    h3 {
+      color: #103b70;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .about {
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      padding: 35px 25px;
+    }
+
+    .about p {
+      max-width: 780px;
+      margin: 12px auto;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #103b70;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 650px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 18px 12px;
+      }
+
+      nav {
+        gap: 10px 16px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="Tr B. Justus Education Hub home">
-      <span class="logo" aria-hidden="true">📘</span>
-      <span><strong>TR B. JUSTUS</strong><small>EDUCATION HUB</small></span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#resources">Resources</a><a href="#library">Library</a><a href="#qr">QR Codes</a><a href="#about">About</a><a href="#contact">Contact</a>
+
+  <header id="home">
+    <div class="brand">
+      📘 TR B. JUSTUS EDUCATION HUB
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#resources">Resources</a>
+      <a href="#library">Library</a>
+      <a href="#resources">QR Codes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-<section class="hero" id="home">
-  <div class="wrap">
-    <div class="eyebrow">Learn • Teach • Grow</div>
-    <h1>Empowering Learners, Strengthening Communities</h1>
-    <p>Discover educational books, lesson notes, revision guides, worksheets and teaching resources for primary, secondary and other levels.</p>
-    <div class="slogan">“Education is the strongest weapon to change the world.”</div>
-    <div class="actions"><a class="btn" href="#resources">Explore Resources</a><a class="btn secondary" href="#about">About the Hub</a></div>
-  </div>
-</section>
+  <main>
 
-<section id="about">
-  <div class="wrap grid">
-    <article class="feature"><div class="feature-icon">📚</div><div><h3>Explore Our Knowledge</h3><p>Find organised learning resources across subjects and education levels. Use the search and filters to locate materials quickly.</p></div></article>
-    <article class="feature"><div class="feature-icon">🤝</div><div><h3>Learning for Everyone</h3><p>Support independent study, classroom teaching and collaborative learning through accessible educational materials.</p></div></article>
-    <article class="feature"><div class="feature-icon">▦</div><div><h3>Scan a QR Code</h3><p>Scan a resource QR code with a phone camera to open the material's Google Drive link, when link access is enabled.</p></div></article>
-    <article class="feature"><div class="feature-icon">📄</div><div><h3>Free Learning Materials</h3><p>Share your own notes, worksheets, lesson plans and study guides for learners and teachers to read or download at no cost.</p></div></article>
-  </div>
-</section>
+    <section class="hero">
+      <div class="tagline">Learn • Teach • Grow</div>
 
-<section id="resources">
-  <div class="wrap">
-    <div class="section-head"><h2>Learning Resources</h2><p>Search the library or filter by education level. New materials can be added by updating the resource list in this website's file.</p></div>
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Search by title, subject or keyword…" aria-label="Search resources">
-      <select id="level" aria-label="Filter by education level"><option value="">All education levels</option><option>Nursery</option><option>Primary</option><option>Secondary</option><option>Teacher Resources</option><option>Other</option></select>
-      <select id="subject" aria-label="Filter by subject"><option value="">All subjects</option><option>English</option><option>Mathematics</option><option>Science</option><option>Social Studies</option><option>Other</option></select>
-    </div>
-    <div id="resourceGrid" class="resource-grid"></div>
-  </div>
-</section>
+      <h1>
+        Empowering Learners,<br>
+        Strengthening Communities
+      </h1>
 
-<section id="library" style="background:#edf4fc">
-  <div class="wrap">
-    <div class="section-head"><h2>How the Digital Library Works</h2><p>Keep your original files in Google Drive and share a link to each resource.</p></div>
-    <div class="grid">
-      <article class="panel"><h3>1. Upload to Google Drive</h3><p>Upload your PDF, document or other learning material to your Google Drive. Use clear file names, for example “Primary 4 Mathematics – Fractions”.</p></article>
-      <article class="panel"><h3>2. Allow free viewing</h3><p>In Drive, open Share settings and set General access to <b>Anyone with the link — Viewer</b>. This allows people with the link to open it without requesting access, subject to Google/account restrictions.</p></article>
-      <article class="panel"><h3>3. Add it to the website</h3><p>Add the title, level, subject and Google Drive share link to the resource list in the website file. Then publish the updated file.</p></article>
-      <article class="panel"><h3>4. Make a QR code</h3><p>Paste the same share link into the QR Code Maker below and generate a QR image. You can print it on the book, worksheet or classroom notice.</p></article>
-    </div>
-  </div>
-</section>
+      <p>
+        Discover educational books, lesson notes, revision guides,
+        worksheets and teaching resources for primary, secondary
+        and other levels.
+      </p>
 
-<section id="qr">
-  <div class="wrap">
-    <div class="section-head"><h2>Free QR Code Maker</h2><p>Create a QR code that opens a Google Drive resource when scanned.</p></div>
-    <div class="qr-layout">
-      <div class="panel">
-        <h3>Enter your Google Drive link</h3>
-        <p>Use the share link copied from Google Drive. The QR code contains the link; it does not contain the actual book or PDF.</p>
-        <form id="qrForm">
-          <label for="qrTitle">Resource name (optional)</label><input id="qrTitle" placeholder="e.g. Primary 5 English Notes">
-          <label for="driveUrl">Google Drive share link</label><input id="driveUrl" type="url" placeholder="https://drive.google.com/..." required>
-          <div style="margin-top:15px"><button class="btn" type="submit">Generate QR Code</button></div>
-        </form>
-        <p class="notice" style="margin-top:17px">Important: set the Drive file to “Anyone with the link — Viewer” if you want people to read it without asking you for access. Do not share confidential or private files this way.</p>
+      <p class="quote">
+        “Education is the strongest weapon to change the world.”
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="#resources">Explore Resources</a>
+        <a class="btn secondary" href="#about">About the Hub</a>
       </div>
-      <div class="panel">
-        <h3>Your QR code</h3>
-        <div class="qr-result" id="qrResult"><div id="qrcode"></div><p id="qrHint">Your QR code will appear here.</p><a id="downloadQr" class="btn blue small" style="display:none" download="tr-b-justus-resource-qr.png">Download QR as PNG</a></div>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:0">Test the QR code with a phone before printing it.</p>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="cards">
+
+        <article class="card" id="library">
+          <div class="icon">📚</div>
+          <h3>Explore Our Knowledge</h3>
+          <p>
+            Find organised learning resources across subjects
+            and education levels. Use the search and filters
+            to locate materials quickly.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🤝</div>
+          <h3>Learning for Everyone</h3>
+          <p>
+            Support independent study, classroom teaching
+            and collaborative learning through accessible
+            educational materials.
+          </p>
+        </article>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact">
-  <div class="wrap">
-    <div class="section-head"><h2>About Tr B. Justus Education Hub</h2><p>A shared home for school information, educational publications and learning materials.</p></div>
-    <div class="panel" style="text-align:center;max-width:800px;margin:auto">
-      <h3>Education is the strongest weapon to change the world.</h3>
-      <p>We aim to help learners, teachers and education communities find useful learning materials across different levels of education.</p>
-      <p><b>Contact:</b> Add your preferred phone number and email address here before publishing.</p>
-    </div>
-  </div>
-</section>
-</main>
+    <section class="section" id="about">
+      <div class="about">
+        <h2>About TR B. Justus Education Hub</h2>
 
-<footer><div class="wrap footer-inner"><div><strong>TR B. JUSTUS EDUCATION HUB</strong><p>“Education is the strongest weapon to change the world.”</p></div><p>Educational resources • Learning for everyone</p><p>© <span id="year"></span> Tr B. Justus Education Hub</p></div></footer>
+        <p>
+          A shared home for school information, educational
+          publications and learning materials.
+        </p>
 
-<!-- QRCode.js is loaded from a public CDN. Internet access is required to generate QR images. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-/*
-HOW TO ADD A RESOURCE:
-Copy one object below and replace its details. Keep the commas and quotation marks.
-{
-  title: "Primary 4 Mathematics - Fractions",
-  level: "Primary",
-  subject: "Mathematics",
-  description: "Notes and practice questions on fractions.",
-  url: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
-}
-*/
-const resources = [
-  // Add your Google Drive resources here. Example object above is intentionally not published.
-];
+        <h3>
+          Education is the strongest weapon to change the world.
+        </h3>
 
-const grid = document.getElementById('resourceGrid');
-const searchInput = document.getElementById('search');
-const levelInput = document.getElementById('level');
-const subjectInput = document.getElementById('subject');
+        <p>
+          We aim to help learners, teachers and education
+          communities find useful learning materials across
+          different levels of education.
+        </p>
 
-function renderResources(){
-  const q = searchInput.value.trim().toLowerCase();
-  const level = levelInput.value;
-  const subject = subjectInput.value;
-  const filtered = resources.filter(r =>
-    (!q || [r.title,r.level,r.subject,r.description].join(' ').toLowerCase().includes(q)) &&
-    (!level || r.level === level) &&
-    (!subject || r.subject === subject)
-  );
-  grid.innerHTML = '';
-  if(!filtered.length){
-    grid.innerHTML = '<div class="empty"><strong>No materials listed yet.</strong><br>Once you add your Google Drive links to the resource list in this website file, your books and notes will appear here.</div>';
-    return;
-  }
-  filtered.forEach(r => {
-    const card = document.createElement('article');
-    card.className = 'resource';
-    const tag = document.createElement('span'); tag.className='tag'; tag.textContent=(r.level||'Resource')+' • '+(r.subject||'Other');
-    const title = document.createElement('h3'); title.textContent=r.title;
-    const desc = document.createElement('p'); desc.textContent=r.description||'Open this educational resource.';
-    const actions = document.createElement('div'); actions.className='resource-actions';
-    const open = document.createElement('a'); open.className='btn small'; open.href=r.url; open.target='_blank'; open.rel='noopener'; open.textContent='Read / Open';
-    const qr = document.createElement('button'); qr.className='btn secondary small'; qr.type='button'; qr.textContent='Make QR';
-    qr.addEventListener('click',()=>{document.getElementById('qrTitle').value=r.title;document.getElementById('driveUrl').value=r.url;document.getElementById('qr').scrollIntoView({behavior:'smooth'});});
-    actions.append(open,qr); card.append(tag,title,desc,actions); grid.append(card);
-  });
-}
-[searchInput,levelInput,subjectInput].forEach(el=>el.addEventListener('input',renderResources));
-renderResources();
-document.getElementById('year').textContent = new Date().getFullYear();
+        <p class="contact" id="contact">
+          Contact: Add your preferred phone number and
+          email address here before publishing.
+        </p>
+      </div>
+    </section>
 
-document.getElementById('qrForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const url = document.getElementById('driveUrl').value.trim();
-  const title = document.getElementById('qrTitle').value.trim();
-  if(!/^https?:\/\//i.test(url)){alert('Please enter a valid web link copied from Google Drive.');return;}
-  const qrBox = document.getElementById('qrcode');
-  qrBox.innerHTML = '';
-  document.getElementById('qrHint').textContent = title ? 'QR code for: '+title : 'Scan to open the shared resource.';
-  if(typeof QRCode === 'undefined'){document.getElementById('qrHint').textContent='QR library could not load. Check your internet connection and try again.';return;}
-  new QRCode(qrBox,{text:url,width:220,height:220,colorDark:'#123b70',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
-  setTimeout(()=>{
-    const canvas=qrBox.querySelector('canvas');
-    const img=qrBox.querySelector('img');
-    const link=document.getElementById('downloadQr');
-    if(canvas){link.href=canvas.toDataURL('image/png');link.style.display='inline-flex';}
-    else if(img){link.href=img.src;link.style.display='inline-flex';}
-  },250);
-});
-</script>
+  </main>
+
+  <footer>
+    <p><strong>TR B. JUSTUS EDUCATION HUB</strong></p>
+    <p>“Education is the strongest weapon to change the world.”</p>
+    <p>Educational resources • Learning for everyone</p>
+    <p>© 2026 TR B. Justus Education Hub</p>
+  </footer>
+
 </body>
 </html>
