@@ -1,570 +1,438 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>TR B. JUSTUS EDUCATION HUB</title>
-<meta name="description" content="Access selected educational books and learning resources from TR B. JUSTUS EDUCATION HUB.">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-  --navy: #12345a;
-  --blue: #1769aa;
-  --gold: #f2b544;
-  --light: #f3f7fc;
-  --text: #263449;
-}
+  <meta name="description"
+        content="TR B. JUSTUS EDUCATION HUB - Educational books, learning materials and resources.">
 
-* { box-sizing: border-box; }
+  <title>TR B. JUSTUS EDUCATION HUB</title>
 
-html { scroll-behavior: smooth; }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  background: var(--light);
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f9;
+      color: #222;
+      line-height: 1.6;
+    }
 
-header {
-  background: var(--navy);
-  color: white;
-  padding: 18px 5%;
-}
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #075e54, #0b7a6b);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
 
-.brand {
-  font-size: 22px;
-  font-weight: bold;
-}
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 10px;
-}
+    header p {
+      font-size: 18px;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
+    /* NAVIGATION */
+    nav {
+      background: #063f39;
+      text-align: center;
+      padding: 12px 5px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-nav a:hover { color: var(--gold); }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 5px;
+    }
 
-.hero {
-  background: linear-gradient(135deg, #12345a, #1769aa);
-  color: white;
-  padding: 65px 6%;
-  text-align: center;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.hero h1 {
-  font-size: clamp(30px, 6vw, 48px);
-  margin: 0 0 12px;
-}
+    /* GENERAL SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px;
+    }
 
-.hero h2 {
-  color: white;
-}
+    .section-title {
+      text-align: center;
+      color: #075e54;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
 
-.hero p {
-  max-width: 720px;
-  margin: 12px auto;
-}
+    /* WELCOME */
+    .welcome {
+      text-align: center;
+    }
 
-.quote {
-  color: #ffdf91;
-  font-style: italic;
-}
+    .welcome p {
+      max-width: 800px;
+      margin: 12px auto;
+      font-size: 17px;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1150px;
-  margin: 0 auto;
-}
+    .highlight {
+      font-weight: bold;
+      color: #075e54;
+    }
 
-section { padding: 42px 0; }
+    /* BOOK LIBRARY */
+    #library {
+      background: white;
+      max-width: 1100px;
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
 
-h2 { color: var(--navy); }
+    .library-intro {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-.intro {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto;
-}
+    .drive-box {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
 
-.button {
-  display: inline-block;
-  padding: 11px 17px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-}
+    .drive-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-.button-primary {
-  background: var(--blue);
-  color: white;
-}
+    .library-note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
 
-.button-light {
-  background: white;
-  color: var(--navy);
-}
+    /* CONTACT */
+    .contact-box {
+      background: white;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
 
-.button:hover { opacity: 0.85; }
+    .contact-item {
+      margin: 14px 0;
+      font-size: 17px;
+    }
 
-.toolbar {
-  margin: 20px 0;
-}
+    .contact-item a {
+      color: #075e54;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-#search {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #ccd5e0;
-  border-radius: 8px;
-  font-size: 16px;
-  background: white;
-}
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
 
-.status {
-  color: #526176;
-  margin: 15px 0;
-}
+    /* FOOTER */
+    footer {
+      background: #063f39;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 20px;
+    }
 
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
+    footer p {
+      margin: 5px 0;
+    }
 
-.book {
-  background: white;
-  border: 1px solid #e1e8f0;
-  border-radius: 12px;
-  padding: 22px;
-  box-shadow: 0 4px 14px #18385a0c;
-  display: flex;
-  flex-direction: column;
-  overflow-wrap: anywhere;
-}
+    /* MOBILE */
+    @media (max-width: 600px) {
 
-.book-icon {
-  font-size: 38px;
-}
+      header h1 {
+        font-size: 25px;
+      }
 
-.book h3 {
-  color: var(--navy);
-  font-size: 19px;
-  margin: 10px 0 16px;
-}
+      header p {
+        font-size: 16px;
+      }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: auto;
-}
+      nav a {
+        margin: 3px 6px;
+        font-size: 14px;
+      }
 
-.empty {
-  background: white;
-  padding: 24px;
-  border-radius: 10px;
-  text-align: center;
-  grid-column: 1 / -1;
-}
+      section {
+        padding: 35px 12px;
+      }
 
-.about {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-}
+      .section-title {
+        font-size: 24px;
+      }
 
-footer {
-  background: var(--navy);
-  color: white;
-  padding: 25px 5%;
-  text-align: center;
-}
-
-footer p { margin: 7px 0; }
-
-footer a { color: #ffdf91; }
-
-.small {
-  color: #617087;
-  font-size: 13px;
-  margin-top: 20px;
-}
-
-@media (max-width: 500px) {
-  header { padding: 16px 5%; }
-  nav { gap: 12px; }
-  .hero { padding: 45px 5%; }
-  .container { width: 92%; }
-}
-</style>
+      .drive-box {
+        height: 600px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="brand">📘 TR B. JUSTUS EDUCATION HUB</div>
+  <!-- =========================
+       HOMEPAGE HEADER
+       ========================= -->
+
+  <header id="home">
+
+    <h1>TR B. JUSTUS EDUCATION HUB</h1>
+
+    <p>
+      Education • Learning • Knowledge • Opportunity
+    </p>
+
+  </header>
+
+
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
   <nav>
+
     <a href="#home">Home</a>
-    <a href="#library">Book Library</a>
+
+    <a href="#library">Books</a>
+
     <a href="#about">About</a>
+
     <a href="#contact">Contact</a>
+
   </nav>
-</header>
 
-<main>
 
-<section class="hero" id="home">
-  <h1>Learn • Teach • Grow</h1>
+  <!-- =========================
+       WELCOME SECTION
+       ========================= -->
 
-  <h2>Empowering Learners, Strengthening Communities</h2>
+  <section class="welcome">
 
-  <p>
-    Discover educational books and learning materials
-    selected to support learners, teachers and parents.
-  </p>
+    <h2 class="section-title">
+      Welcome to TR B. JUSTUS EDUCATION HUB
+    </h2>
 
-  <p class="quote">
-    “Education is the strongest weapon to change the world.”
-  </p>
-
-  <a class="button button-light" href="#library">
-    Explore Our Books
-  </a>
-</section>
-
-<section id="library">
-  <div class="container">
-
-    <div class="intro">
-      <h2>📚 Our Digital Book Library</h2>
-      <p>
-        Find a book by name. Tap its name or choose
-        Read Online to open it.
-      </p>
-    </div>
-
-    <div class="toolbar">
-      <input
-        type="search"
-        id="search"
-        placeholder="Search for a book by name..."
-        aria-label="Search books"
-      >
-    </div>
-
-    <div id="status" class="status" role="status">
-      Loading books...
-    </div>
-
-    <div id="books" class="book-grid"></div>
-
-    <p class="small">
-      Books are provided through Google Drive. To access a book,
-      its owner must allow access to anyone with the link.
+    <p>
+      Welcome to the <span class="highlight">
+      TR B. JUSTUS EDUCATION HUB</span>,
+      an online platform dedicated to supporting learning
+      through educational books and learning materials.
     </p>
 
-  </div>
-</section>
+    <p>
+      Our aim is to make useful educational resources
+      easier to access for learners, teachers and
+      education lovers.
+    </p>
 
-<section id="about">
-  <div class="container">
-    <div class="about">
-      <h2>About Us</h2>
+  </section>
+
+
+  <!-- =========================
+       BOOK LIBRARY
+       ========================= -->
+
+  <section id="library">
+
+    <h2 class="section-title">
+      📚 ONLINE BOOK LIBRARY
+    </h2>
+
+    <div class="library-intro">
 
       <p>
-        TR B. JUSTUS EDUCATION HUB is dedicated to supporting
-        education by making selected learning materials
-        accessible to learners, teachers, parents and
-        education lovers.
+        Browse the educational books and learning
+        resources available in our library.
       </p>
 
       <p>
-        Our mission is to encourage reading, support teaching
-        and learning, and improve access to educational resources.
+        New resources can be added to our dedicated
+        education library folder.
       </p>
+
     </div>
-  </div>
-</section>
 
-<section id="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
 
-    <p>
-      <strong>Phone / WhatsApp:</strong>
-      <a href="https://wa.me/256758646051">
-        +256 758 646 051
-      </a>
+    <!--
+      YOUR GOOGLE DRIVE BOOK FOLDER
+
+      Folder ID:
+      1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX
+    -->
+
+    <div class="drive-box">
+
+      <iframe
+        src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
+        title="TR B. JUSTUS EDUCATION HUB Book Library">
+      </iframe>
+
+    </div>
+
+
+    <p class="library-note">
+      📖 Only educational resources placed in the
+      dedicated TR B. JUSTUS EDUCATION HUB BOOKS
+      folder are intended for this library.
     </p>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:justubigabwarunga1994@gmail.com">
-        justubigabwarunga1994@gmail.com
-      </a>
-    </p>
+  </section>
 
-    <p>
-      <a href="mailto:justubigabwarunga2025@gmail.com">
-        justubigabwarunga2025@gmail.com
-      </a>
-    </p>
 
-    <p>
-      <a href="mailto:justubigabwarunga2026@gmail.com">
-        justubigabwarunga2026@gmail.com
-      </a>
-    </p>
+  <!-- =========================
+       ABOUT
+       ========================= -->
 
-    <p>
-      <a href="mailto:justubigabwarunga2027@gmail.com">
-        justubigabwarunga2027@gmail.com
-      </a>
-    </p>
-  </div>
-</section>
+  <section id="about">
 
-</main>
+    <h2 class="section-title">
+      About TR B. JUSTUS EDUCATION HUB
+    </h2>
 
-<footer>
-  <p><strong>TR B. JUSTUS EDUCATION HUB</strong></p>
-  <p>Learn • Teach • Grow</p>
-  <p>© 2026 TR B. JUSTUS EDUCATION HUB</p>
-</footer>
+    <div class="welcome">
 
-<script>
-/*
-  IMPORTANT:
-  Replace the placeholder below with the published CSV
-  URL of your Google Sheets book list.
-*/
-const SHEET_CSV_URL =
-  "PASTE_YOUR_PUBLISHED_CSV_URL_HERE";
+      <p>
+        TR B. JUSTUS EDUCATION HUB is an educational
+        platform created to provide access to useful
+        learning materials and educational resources.
+      </p>
 
-const booksContainer = document.getElementById("books");
-const statusBox = document.getElementById("status");
-const searchInput = document.getElementById("search");
+      <p>
+        The platform supports learners, teachers and
+        education lovers by bringing learning resources
+        together in one accessible online location.
+      </p>
 
-let allBooks = [];
+    </div>
 
-function parseCSV(text) {
-  const rows = [];
-  let row = [];
-  let value = "";
-  let quoted = false;
+  </section>
 
-  for (let i = 0; i < text.length; i++) {
-    const ch = text[i];
 
-    if (ch === '"') {
-      if (quoted && text[i + 1] === '"') {
-        value += '"';
-        i++;
-      } else {
-        quoted = !quoted;
-      }
-    } else if (ch === "," && !quoted) {
-      row.push(value.trim());
-      value = "";
-    } else if (
-      (ch === "\n" || ch === "\r") && !quoted
-    ) {
-      if (ch === "\r" && text[i + 1] === "\n") i++;
+  <!-- =========================
+       CONTACT
+       ========================= -->
 
-      row.push(value.trim());
+  <section id="contact">
 
-      if (row.some(cell => cell !== "")) {
-        rows.push(row);
-      }
+    <h2 class="section-title">
+      Contact Us
+    </h2>
 
-      row = [];
-      value = "";
-    } else {
-      value += ch;
-    }
-  }
+    <div class="contact-box">
 
-  row.push(value.trim());
+      <div class="contact-item">
 
-  if (row.some(cell => cell !== "")) {
-    rows.push(row);
-  }
+        📱 WhatsApp / Phone:
 
-  return rows;
-}
-
-function escapeHTML(value) {
-  return String(value).replace(/[&<>"']/g, ch => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;"
-  })[ch]);
-}
-
-function safeDriveURL(value) {
-  try {
-    const url = new URL(value);
-
-    if (
-      url.protocol === "https:" &&
-      url.hostname === "drive.google.com"
-    ) {
-      return url.href;
-    }
-  } catch (error) {}
-
-  return "";
-}
-
-function downloadURL(value) {
-  try {
-    const url = new URL(value);
-    let id = "";
-
-    const match = url.pathname.match(/\/file\/d\/([^/]+)/);
-
-    if (match) {
-      id = match[1];
-    } else {
-      id = url.searchParams.get("id") || "";
-    }
-
-    if (id) {
-      return "https://drive.google.com/uc?export=download&id=" +
-        encodeURIComponent(id);
-    }
-  } catch (error) {}
-
-  return "";
-}
-
-function renderBooks() {
-  const term = searchInput.value.toLowerCase().trim();
-
-  const filtered = allBooks.filter(book =>
-    book.name.toLowerCase().includes(term)
-  );
-
-  booksContainer.innerHTML = "";
-
-  if (filtered.length === 0) {
-    booksContainer.innerHTML =
-      '<div class="empty">No books found. Try another name.</div>';
-    return;
-  }
-
-  filtered.forEach(book => {
-    const card = document.createElement("article");
-    card.className = "book";
-
-    const name = escapeHTML(book.name);
-    const link = safeDriveURL(book.link);
-    const download = downloadURL(link);
-
-    card.innerHTML = `
-      <div class="book-icon" aria-hidden="true">📖</div>
-      <h3>${name}</h3>
-
-      <div class="actions">
-        <a class="button button-primary"
-           href="${escapeHTML(link)}"
-           target="_blank"
-           rel="noopener noreferrer">
-          Read Online
+        <a href="tel:+256758646051">
+          +256 758 646 051
         </a>
 
-        ${download ? `
-          <a class="button button-light"
-             href="${escapeHTML(download)}"
-             target="_blank"
-             rel="noopener noreferrer">
-            Download
-          </a>
-        ` : ""}
       </div>
-    `;
 
-    booksContainer.appendChild(card);
-  });
-}
 
-async function loadBooks() {
-  if (
-    !SHEET_CSV_URL.startsWith("https://") ||
-    SHEET_CSV_URL.includes("PASTE_YOUR")
-  ) {
-    statusBox.textContent =
-      "The book library is awaiting its Google Sheets connection.";
-    booksContainer.innerHTML =
-      '<div class="empty">The library will appear here after setup is completed.</div>';
-    return;
-  }
+      <div class="contact-item">
 
-  try {
-    const response = await fetch(SHEET_CSV_URL, {
-      cache: "no-store"
-    });
+        📧 Email:
 
-    if (!response.ok) {
-      throw new Error("Could not load the spreadsheet.");
-    }
+        <a href="mailto:justubigabwarunga1994@gmail.com">
+          justubigabwarunga1994@gmail.com
+        </a>
 
-    const csv = await response.text();
-    const rows = parseCSV(csv);
+      </div>
 
-    if (rows.length < 2) {
-      allBooks = [];
-    } else {
-      const headers = rows[0].map(header =>
-        header.replace(/^\uFEFF/, "").trim().toLowerCase()
-      );
 
-      const nameIndex = headers.indexOf("book name");
-      const linkIndex = headers.indexOf("google drive link");
+      <div class="contact-item">
 
-      if (nameIndex === -1 || linkIndex === -1) {
-        throw new Error("Check the spreadsheet headings.");
-      }
+        📧 Email:
 
-      allBooks = rows.slice(1).map(row => ({
-        name: (row[nameIndex] || "").trim(),
-        link: (row[linkIndex] || "").trim()
-      })).filter(book =>
-        book.name && safeDriveURL(book.link)
-      );
-    }
+        <a href="mailto:justubigabwarunga2025@gmail.com">
+          justubigabwarunga2025@gmail.com
+        </a>
 
-    renderBooks();
+      </div>
 
-    statusBox.textContent =
-      allBooks.length + " book(s) available in the library.";
 
-  } catch (error) {
-    statusBox.textContent =
-      "Unable to load books. Check the published sheet link and internet connection.";
+      <div class="contact-item">
 
-    booksContainer.innerHTML =
-      '<div class="empty">The library could not load. Please try again later.</div>';
-  }
-}
+        📧 Email:
 
-searchInput.addEventListener("input", renderBooks);
+        <a href="mailto:justubigabwarunga2026@gmail.com">
+          justubigabwarunga2026@gmail.com
+        </a>
 
-loadBooks();
-</script>
+      </div>
+
+
+      <div class="contact-item">
+
+        📧 Email:
+
+        <a href="mailto:justubigabwarunga2027@gmail.com">
+          justubigabwarunga2027@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <p>
+      <strong>TR B. JUSTUS EDUCATION HUB</strong>
+    </p>
+
+    <p>
+      Education • Learning • Knowledge
+    </p>
+
+    <p>
+      © 2026 TR B. JUSTUS EDUCATION HUB
+    </p>
+
+  </footer>
+
 
 </body>
 </html>
