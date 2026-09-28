@@ -2,12 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="TR B. JUSTUS EDUCATION HUB - Educational books, learning materials and resources.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
 
@@ -19,34 +14,32 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7f9;
-      color: #222;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      background: #f4f7fb;
+      color: #222;
     }
 
-    /* HEADER */
     header {
-      background: linear-gradient(135deg, #075e54, #0b7a6b);
+      background: #123c69;
       color: white;
       text-align: center;
-      padding: 45px 20px;
+      padding: 35px 15px;
     }
 
     header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-bottom: 8px;
     }
 
     header p {
-      font-size: 18px;
+      font-size: 17px;
     }
 
-    /* NAVIGATION */
     nav {
-      background: #063f39;
+      background: #092c4c;
       text-align: center;
-      padding: 12px 5px;
+      padding: 12px;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -55,147 +48,93 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 15px;
       font-weight: bold;
-      display: inline-block;
-      padding: 5px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    /* GENERAL SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
       padding: 45px 20px;
     }
 
-    .section-title {
-      text-align: center;
-      color: #075e54;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    /* WELCOME */
     .welcome {
       text-align: center;
-    }
-
-    .welcome p {
-      max-width: 800px;
-      margin: 12px auto;
-      font-size: 17px;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #075e54;
-    }
-
-    /* BOOK LIBRARY */
-    #library {
       background: white;
-      max-width: 1100px;
-      border-radius: 15px;
       margin-top: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      border-radius: 12px;
     }
 
-    .library-intro {
+    h2 {
+      color: #123c69;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #123c69;
+      margin-bottom: 10px;
+    }
+
+    .library {
       text-align: center;
-      margin-bottom: 25px;
+      background: white;
+      border-radius: 12px;
+      margin-top: 20px;
     }
 
-    .drive-box {
+    .library iframe {
       width: 100%;
       height: 700px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .drive-box iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .library-note {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* CONTACT */
-    .contact-box {
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
       background: white;
-      max-width: 800px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-      text-align: center;
     }
 
-    .contact-item {
-      margin: 14px 0;
-      font-size: 17px;
+    .notice {
+      margin-top: 15px;
+      padding: 15px;
+      background: #eef5ff;
+      border-radius: 8px;
     }
 
-    .contact-item a {
-      color: #075e54;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #063f39;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
+    .contact {
+      background: white;
+      border-radius: 12px;
       margin-top: 20px;
     }
 
-    footer p {
-      margin: 5px 0;
+    .contact p {
+      margin: 10px 0;
     }
 
-    /* MOBILE */
+    footer {
+      background: #092c4c;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 20px;
+    }
+
     @media (max-width: 600px) {
-
       header h1 {
-        font-size: 25px;
-      }
-
-      header p {
-        font-size: 16px;
+        font-size: 24px;
       }
 
       nav a {
-        margin: 3px 6px;
+        margin: 0 7px;
         font-size: 14px;
       }
 
       section {
-        padding: 35px 12px;
+        padding: 30px 15px;
       }
 
-      .section-title {
-        font-size: 24px;
-      }
-
-      .drive-box {
+      .library iframe {
         height: 600px;
       }
     }
@@ -204,235 +143,102 @@
 
 <body>
 
-  <!-- =========================
-       HOMEPAGE HEADER
-       ========================= -->
-
-  <header id="home">
-
+  <header>
     <h1>TR B. JUSTUS EDUCATION HUB</h1>
-
-    <p>
-      Education • Learning • Knowledge • Opportunity
-    </p>
-
+    <p>Education • Learning • Knowledge • Opportunity</p>
   </header>
 
-
-  <!-- =========================
-       NAVIGATION
-       ========================= -->
-
   <nav>
-
     <a href="#home">Home</a>
-
-    <a href="#library">Books</a>
-
+    <a href="#books">Books</a>
     <a href="#about">About</a>
-
     <a href="#contact">Contact</a>
-
   </nav>
 
-
-  <!-- =========================
-       WELCOME SECTION
-       ========================= -->
-
-  <section class="welcome">
-
-    <h2 class="section-title">
-      Welcome to TR B. JUSTUS EDUCATION HUB
-    </h2>
+  <section id="home" class="welcome">
+    <h2>Welcome to TR B. JUSTUS EDUCATION HUB</h2>
 
     <p>
-      Welcome to the <span class="highlight">
-      TR B. JUSTUS EDUCATION HUB</span>,
-      an online platform dedicated to supporting learning
-      through educational books and learning materials.
+      Welcome to the TR B. JUSTUS EDUCATION HUB, an online platform
+      dedicated to supporting learning through educational books and
+      learning materials.
     </p>
+
+    <br>
 
     <p>
-      Our aim is to make useful educational resources
-      easier to access for learners, teachers and
-      education lovers.
+      Our aim is to make useful educational resources easier to access
+      for learners, teachers and education lovers.
+    </p>
+  </section>
+
+  <section id="books" class="library">
+
+    <h2>📚 ONLINE BOOK LIBRARY</h2>
+
+    <p>
+      Browse the educational books and learning resources available
+      in our library.
+    </p>
+
+    <div class="notice">
+      📖 Only educational resources placed in the dedicated
+      <strong>TR B. JUSTUS EDUCATION HUB BOOKS</strong> folder
+      are intended for this library.
+    </div>
+
+    <iframe
+      src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
+      allow="autoplay">
+    </iframe>
+
+  </section>
+
+  <section id="about" class="welcome">
+
+    <h2>About TR B. JUSTUS EDUCATION HUB</h2>
+
+    <p>
+      TR B. JUSTUS EDUCATION HUB is an educational platform created
+      to provide access to useful learning materials and educational
+      resources.
+    </p>
+
+    <br>
+
+    <p>
+      The platform supports learners, teachers and education lovers
+      by bringing learning resources together in one accessible
+      online location.
     </p>
 
   </section>
 
+  <section id="contact" class="contact">
 
-  <!-- =========================
-       BOOK LIBRARY
-       ========================= -->
+    <h2>Contact Us</h2>
 
-  <section id="library">
+    <p>📱 WhatsApp / Phone: +256 758 646 051</p>
 
-    <h2 class="section-title">
-      📚 ONLINE BOOK LIBRARY
-    </h2>
+    <p>📧 Email: justubigabwarunga1994@gmail.com</p>
 
-    <div class="library-intro">
+    <p>📧 Email: justubigabwarunga2025@gmail.com</p>
 
-      <p>
-        Browse the educational books and learning
-        resources available in our library.
-      </p>
+    <p>📧 Email: justubigabwarunga2026@gmail.com</p>
 
-      <p>
-        New resources can be added to our dedicated
-        education library folder.
-      </p>
-
-    </div>
-
-
-    <!--
-      YOUR GOOGLE DRIVE BOOK FOLDER
-
-      Folder ID:
-      1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX
-    -->
-
-    <div class="drive-box">
-
-      <iframe
-        src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
-        title="TR B. JUSTUS EDUCATION HUB Book Library">
-      </iframe>
-
-    </div>
-
-
-    <p class="library-note">
-      📖 Only educational resources placed in the
-      dedicated TR B. JUSTUS EDUCATION HUB BOOKS
-      folder are intended for this library.
-    </p>
+    <p>📧 Email: justubigabwarunga2027@gmail.com</p>
 
   </section>
-
-
-  <!-- =========================
-       ABOUT
-       ========================= -->
-
-  <section id="about">
-
-    <h2 class="section-title">
-      About TR B. JUSTUS EDUCATION HUB
-    </h2>
-
-    <div class="welcome">
-
-      <p>
-        TR B. JUSTUS EDUCATION HUB is an educational
-        platform created to provide access to useful
-        learning materials and educational resources.
-      </p>
-
-      <p>
-        The platform supports learners, teachers and
-        education lovers by bringing learning resources
-        together in one accessible online location.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       CONTACT
-       ========================= -->
-
-  <section id="contact">
-
-    <h2 class="section-title">
-      Contact Us
-    </h2>
-
-    <div class="contact-box">
-
-      <div class="contact-item">
-
-        📱 WhatsApp / Phone:
-
-        <a href="tel:+256758646051">
-          +256 758 646 051
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📧 Email:
-
-        <a href="mailto:justubigabwarunga1994@gmail.com">
-          justubigabwarunga1994@gmail.com
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📧 Email:
-
-        <a href="mailto:justubigabwarunga2025@gmail.com">
-          justubigabwarunga2025@gmail.com
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📧 Email:
-
-        <a href="mailto:justubigabwarunga2026@gmail.com">
-          justubigabwarunga2026@gmail.com
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📧 Email:
-
-        <a href="mailto:justubigabwarunga2027@gmail.com">
-          justubigabwarunga2027@gmail.com
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
 
   <footer>
 
-    <p>
-      <strong>TR B. JUSTUS EDUCATION HUB</strong>
-    </p>
+    <strong>TR B. JUSTUS EDUCATION HUB</strong>
 
-    <p>
-      Education • Learning • Knowledge
-    </p>
+    <p>Education • Learning • Knowledge</p>
 
-    <p>
-      © 2026 TR B. JUSTUS EDUCATION HUB
-    </p>
+    <p>© 2026 TR B. JUSTUS EDUCATION HUB</p>
 
   </footer>
-
 
 </body>
 </html>
