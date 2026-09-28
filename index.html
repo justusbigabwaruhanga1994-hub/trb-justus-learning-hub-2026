@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>TR B. JUSTUS EDUCATION HUB</title>
+
+  <meta name="description" content="TR B. JUSTUS EDUCATION HUB provides educational books and learning resources for learners and teachers.">
 
   <style>
     * {
@@ -85,7 +88,7 @@
     }
 
     .buttons {
-      margin-top: 28px;
+      margin-top: 20px;
     }
 
     .btn {
@@ -97,6 +100,11 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: #1764a0;
     }
 
     .btn.secondary {
@@ -105,10 +113,19 @@
       border: 1px solid #103b70;
     }
 
+    .btn.secondary:hover {
+      background: #e7f0fc;
+    }
+
     .section {
       max-width: 1100px;
       margin: auto;
       padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
     }
 
     .cards {
@@ -123,6 +140,7 @@
       border-radius: 10px;
       border: 1px solid #e1e8f0;
       box-shadow: 0 4px 14px rgba(16, 59, 112, 0.06);
+      overflow-wrap: anywhere;
     }
 
     .icon {
@@ -142,6 +160,20 @@
       font-size: 21px;
     }
 
+    .card p {
+      margin: 8px 0;
+    }
+
+    .book-label {
+      display: inline-block;
+      background: #e7f0fc;
+      color: #103b70;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin: 5px 4px 5px 0;
+    }
+
     .about {
       text-align: center;
       background: white;
@@ -155,8 +187,12 @@
     }
 
     .contact {
-      margin-top: 20px;
+      margin-top: 25px;
       font-weight: bold;
+    }
+
+    .contact p {
+      margin: 12px auto;
     }
 
     .contact a {
@@ -167,10 +203,6 @@
 
     .contact a:hover {
       text-decoration: underline;
-    }
-
-    .contact-item {
-      margin: 10px auto;
     }
 
     footer {
@@ -215,7 +247,6 @@
       <a href="#home">Home</a>
       <a href="#resources">Resources</a>
       <a href="#library">Library</a>
-      <a href="#resources">QR Codes</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -223,6 +254,7 @@
 
   <main>
 
+    <!-- HOMEPAGE -->
     <section class="hero">
       <div class="tagline">Learn • Teach • Grow</div>
 
@@ -247,22 +279,32 @@
       </div>
     </section>
 
+    <!-- LEARNING RESOURCES -->
     <section class="section" id="resources">
+
+      <h2 class="section-title">Learning Resources</h2>
+
       <div class="cards">
 
-        <article class="card" id="library">
+        <!-- INTRODUCTION CARD -->
+        <article class="card">
           <div class="icon">📚</div>
+
           <h3>Explore Our Knowledge</h3>
+
           <p>
-            Find organised learning resources across subjects
-            and education levels. Use the search and filters
-            to locate materials quickly.
+            Find educational resources across subjects and
+            education levels. Select a book below to read
+            online or download it.
           </p>
         </article>
 
+        <!-- LEARNING FOR EVERYONE CARD -->
         <article class="card">
           <div class="icon">🤝</div>
+
           <h3>Learning for Everyone</h3>
+
           <p>
             Support independent study, classroom teaching
             and collaborative learning through accessible
@@ -270,11 +312,52 @@
           </p>
         </article>
 
+        <!-- FIRST BOOK: SCHOO -->
+        <article class="card" id="library">
+
+          <div class="icon">📘</div>
+
+          <h3>schoo</h3>
+
+          <span class="book-label">Nursery</span>
+          <span class="book-label">Other</span>
+
+          <p>
+            Learning material for nursery learners.
+          </p>
+
+          <div class="buttons">
+
+            <!-- READ ONLINE -->
+            <a
+              class="btn"
+              href="https://drive.google.com/file/d/1gtpO8kpI8NegoaM4lYoBDF_5XX-gx1c7/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read Online
+            </a>
+
+            <!-- DOWNLOAD BOOK -->
+            <a
+              class="btn secondary"
+              href="https://drive.google.com/uc?export=download&amp;id=1gtpO8kpI8NegoaM4lYoBDF_5XX-gx1c7"
+              target="_blank"
+              rel="noopener noreferrer">
+              Download PDF
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="section" id="about">
+
       <div class="about">
+
         <h2>About TR B. Justus Education Hub</h2>
 
         <p>
@@ -292,51 +375,61 @@
           different levels of education.
         </p>
 
+        <!-- CONTACT INFORMATION -->
         <div class="contact" id="contact">
+
           <h3>Contact TR B. JUSTUS EDUCATION HUB</h3>
 
-          <p class="contact-item">
+          <p>
             <strong>Phone / WhatsApp:</strong><br>
-            <a href="tel:+256758646051">+256 758 646 051</a>
+            <a href="tel:+256758646051">
+              +256 758 646 051
+            </a>
           </p>
 
-          <p class="contact-item">
-            <strong>Email addresses:</strong>
-          </p>
+          <p><strong>Email addresses:</strong></p>
 
-          <p class="contact-item">
+          <p>
             <a href="mailto:justubigabwarunga1994@gmail.com">
               justubigabwarunga1994@gmail.com
             </a>
           </p>
 
-          <p class="contact-item">
+          <p>
             <a href="mailto:justubigabwarunga2025@gmail.com">
               justubigabwarunga2025@gmail.com
             </a>
           </p>
 
-          <p class="contact-item">
+          <p>
             <a href="mailto:justubigabwarunga2026@gmail.com">
               justubigabwarunga2026@gmail.com
             </a>
           </p>
 
-          <p class="contact-item">
+          <p>
             <a href="mailto:justubigabwarunga2027@gmail.com">
               justubigabwarunga2027@gmail.com
             </a>
           </p>
+
         </div>
+
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p><strong>TR B. JUSTUS EDUCATION HUB</strong></p>
-    <p>“Education is the strongest weapon to change the world.”</p>
+
+    <p>
+      “Education is the strongest weapon to change the world.”
+    </p>
+
     <p>Educational resources • Learning for everyone</p>
+
     <p>© 2026 TR B. Justus Education Hub</p>
   </footer>
 
