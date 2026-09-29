@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +7,9 @@
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
 
-  <meta name="description" content="TR B. JUSTUS EDUCATION HUB promotes access to quality education, excellent learning materials and educational opportunities for learners at all levels, regardless of family income.">
+  <meta name="description" content="TR B. JUSTUS EDUCATION HUB provides educational books, learning materials and knowledge to learners and teachers at all levels.">
 
   <style>
-    :root {
-      --navy: #123c69;
-      --dark: #092c4c;
-      --blue: #0875cf;
-      --yellow: #ffdc00;
-      --light: #f4f7fb;
-      --pale-blue: #eef5ff;
-      --white: #ffffff;
-      --text: #263746;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -33,288 +23,228 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      background: var(--light);
-      color: var(--text);
+      color: #253449;
+      background: #f5f8fc;
     }
 
     header {
-      background: var(--navy);
-      color: var(--white);
+      background: #103b70;
+      color: white;
       text-align: center;
       padding: 30px 15px;
-      border-bottom: 5px solid var(--yellow);
+      border-bottom: 5px solid #f2bd32;
     }
 
     header h1 {
-      font-size: clamp(24px, 4vw, 36px);
+      font-size: clamp(25px, 5vw, 38px);
       line-height: 1.3;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     header p {
-      color: var(--yellow);
       font-size: 16px;
+      color: #e4efff;
     }
 
     nav {
-      background: var(--dark);
-      text-align: center;
-      padding: 13px 8px;
+      background: #08294f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 12px 8px;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
     nav a {
-      display: inline-block;
-      color: var(--white);
+      color: white;
       text-decoration: none;
-      margin: 4px 12px;
+      padding: 9px 14px;
+      border-radius: 5px;
       font-weight: bold;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: var(--yellow);
-    }
-
-    section {
-      scroll-margin-top: 65px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 35px 20px;
+      background: #f2bd32;
+      color: #08294f;
     }
 
     .hero {
-      background: linear-gradient(135deg, #ffffff, #e3f2ff);
-      padding: 55px 20px;
+      background: linear-gradient(135deg, #dcecff, #ffffff);
+      padding: 65px 20px;
       text-align: center;
     }
 
-    .hero-inner {
-      max-width: 850px;
-      margin: auto;
-    }
-
     .hero h2 {
-      color: var(--navy);
-      font-size: clamp(28px, 5vw, 43px);
-      line-height: 1.25;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 span {
-      color: var(--blue);
+      color: #103b70;
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 15px;
+      line-height: 1.3;
     }
 
     .hero p {
-      margin-bottom: 12px;
+      max-width: 750px;
+      margin: 0 auto 24px;
+      font-size: 17px;
     }
 
-    .hero-slogan {
-      color: var(--navy);
-      font-weight: bold;
-      font-size: 19px;
-      margin-top: 18px;
-    }
-
-    .button {
+    .btn {
       display: inline-block;
-      margin-top: 18px;
+      background: #f2bd32;
+      color: #08294f;
       padding: 12px 23px;
-      border-radius: 8px;
-      background: var(--blue);
-      color: white;
-      font-weight: bold;
+      margin: 5px;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    .button:hover {
-      background: var(--navy);
+    .btn:hover {
+      background: #e3a90f;
+    }
+
+    .btn-blue {
+      background: #103b70;
+      color: white;
+    }
+
+    .btn-blue:hover {
+      background: #08294f;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 35px 22px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px rgba(16, 59, 112, 0.07);
+      scroll-margin-top: 75px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #103b70;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      color: #103b70;
+      margin: 20px 0 8px;
+    }
+
+    .section p {
+      margin-bottom: 13px;
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      padding: 25px 4%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .feature {
-      background: white;
-      padding: 20px 12px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 3px 12px #123c6910;
-    }
-
-    .feature-icon {
-      font-size: 34px;
-    }
-
-    .feature h3 {
-      color: var(--navy);
-      font-size: 17px;
-      margin: 5px 0;
-    }
-
-    .feature p {
-      font-size: 14px;
-    }
-
-    .panel {
-      background: white;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 4px 15px #123c690d;
-      margin-bottom: 25px;
-    }
-
-    .section-title {
-      color: var(--navy);
-      font-size: clamp(24px, 4vw, 32px);
-      line-height: 1.3;
-      margin-bottom: 14px;
-    }
-
-    .subheading {
-      color: var(--blue);
-      font-size: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
       margin-top: 25px;
-      margin-bottom: 8px;
     }
 
-    .profile-text {
-      margin-bottom: 13px;
+    .feature-card {
+      background: #f0f6ff;
+      padding: 22px;
+      border-left: 4px solid #f2bd32;
+      border-radius: 8px;
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+    }
+
+    .book-note {
+      background: #fff7df;
+      border-left: 4px solid #f2bd32;
+      padding: 15px;
+      margin: 18px 0;
+      border-radius: 5px;
+    }
+
+    .library-frame {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #d6e0ed;
+      border-radius: 8px;
+      background: white;
     }
 
     .objectives {
       padding-left: 25px;
-      margin-top: 10px;
     }
 
     .objectives li {
-      padding: 5px 0;
+      margin-bottom: 10px;
     }
 
-    .belief {
-      background: var(--pale-blue);
-      border-left: 5px solid var(--blue);
-      border-radius: 8px;
-      padding: 18px;
-      margin-top: 22px;
-    }
-
-    .motto {
+    .contact-box {
       text-align: center;
-      background: var(--navy);
-      color: white;
-      border-radius: 12px;
-      padding: 23px 15px;
-      margin-top: 25px;
-    }
-
-    .motto h3 {
-      color: var(--yellow);
-      font-size: 24px;
-    }
-
-    .library {
-      text-align: center;
-    }
-
-    .library-note {
-      text-align: left;
-      background: var(--pale-blue);
-      border-left: 5px solid var(--blue);
-      padding: 15px;
+      background: #edf5ff;
+      padding: 24px;
       border-radius: 8px;
-      margin: 20px 0;
     }
 
-    .library iframe {
-      width: 100%;
-      height: 700px;
-      border: 1px solid #d5e2f0;
-      border-radius: 10px;
-      background: white;
-    }
-
-    .request-copy {
-      background: #fff9d9;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .request-copy h3 {
-      color: var(--navy);
-    }
-
-    .contact p {
-      margin: 12px 0;
+    .contact-box a {
+      color: #104c8c;
+      font-weight: bold;
       overflow-wrap: anywhere;
     }
 
-    .contact a {
-      color: var(--blue);
+    .visitor-box {
+      text-align: center;
+      background: #edf5ff;
+      padding: 25px 15px;
+      margin: 30px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 1px solid #d8e7fa;
+    }
+
+    .visitor-box h2 {
+      color: #103b70;
+      margin-bottom: 10px;
+    }
+
+    .visitor-box img {
+      display: inline-block;
+      max-width: 100%;
+      margin: 12px 0;
     }
 
     footer {
-      background: var(--dark);
+      background: #08294f;
       color: white;
       text-align: center;
-      padding: 28px 15px;
-      border-top: 5px solid var(--yellow);
-    }
-
-    footer h3 {
-      color: var(--yellow);
-      font-size: 21px;
+      padding: 25px 15px;
+      margin-top: 35px;
     }
 
     footer p {
-      margin-top: 5px;
+      margin: 5px 0;
     }
 
-    @media (max-width: 800px) {
-      .features {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 600px) {
+      .section {
+        margin: 18px 10px;
+        padding: 25px 16px;
       }
 
-      .panel {
-        padding: 22px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        padding: 25px 10px;
+      .hero {
+        padding: 45px 17px;
       }
 
       nav a {
-        margin: 4px 7px;
-        font-size: 14px;
+        padding: 8px 10px;
       }
 
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        padding: 25px 14px;
-      }
-
-      .panel {
-        padding: 18px;
-      }
-
-      .library iframe {
-        height: 600px;
+      .library-frame {
+        height: 500px;
       }
     }
   </style>
@@ -322,301 +252,301 @@
 
 <body>
 
+  <!-- WEBSITE HEADER -->
   <header>
     <h1>TR B. JUSTUS EDUCATION HUB</h1>
     <p>Education • Learning • Knowledge • Opportunity</p>
+    <p>Empowering Every Learner, Regardless of Background.</p>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="#home">Home</a>
     <a href="#books">Books</a>
     <a href="#about">About Us</a>
+    <a href="#objectives">Our Objectives</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <main>
+  <!-- HOME SECTION -->
+  <section class="hero" id="home">
+    <h2>Welcome to TR B. JUSTUS EDUCATION HUB</h2>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-      <div class="hero-inner">
+    <p>
+      A learning platform dedicated to providing educational books,
+      quality learning materials and useful knowledge to learners,
+      teachers and education lovers at all levels.
+    </p>
 
-        <h2>
-          Welcome to <span>TR B. JUSTUS EDUCATION HUB</span>
-        </h2>
+    <p>
+      We believe that access to knowledge should not be determined
+      by a person's family income or background.
+    </p>
 
-        <p>
-          An online educational platform dedicated to extending
-          quality knowledge, excellent learning materials and
-          meaningful educational opportunities to learners at all levels.
-        </p>
+    <a href="#books" class="btn">Explore Learning Materials</a>
+    <a href="#about" class="btn btn-blue">Learn About Us</a>
+  </section>
 
-        <p>
-          We believe that every learner deserves an opportunity to learn,
-          grow and achieve their potential, regardless of their family's
-          income or financial circumstances.
-        </p>
+  <!-- OUR SERVICES -->
+  <section class="section">
+    <h2>What We Offer</h2>
 
-        <p class="hero-slogan">
-          Quality Education for Every Learner
-        </p>
-
-        <a class="button" href="#books">Explore Our Book Library</a>
-
-      </div>
-    </section>
-
-    <!-- KEY FEATURES -->
     <div class="features">
-
-      <div class="feature">
-        <div class="feature-icon">📚</div>
-        <h3>Quality Resources</h3>
-        <p>Useful books and educational materials.</p>
+      <div class="feature-card">
+        <h3>📚 Educational Books</h3>
+        <p>
+          Access selected educational books and reading materials
+          made available through our online library.
+        </p>
       </div>
 
-      <div class="feature">
-        <div class="feature-icon">🎓</div>
-        <h3>All Learning Levels</h3>
-        <p>Resources for learners at different stages.</p>
+      <div class="feature-card">
+        <h3>🎓 Learning Support</h3>
+        <p>
+          Resources to support learners, teachers and individuals
+          pursuing knowledge and personal development.
+        </p>
       </div>
 
-      <div class="feature">
-        <div class="feature-icon">🌍</div>
-        <h3>Inclusive Learning</h3>
-        <p>Education for learners from all backgrounds.</p>
+      <div class="feature-card">
+        <h3>🌍 Equal Opportunity</h3>
+        <p>
+          We promote access to learning resources for people from
+          different educational and economic backgrounds.
+        </p>
       </div>
+    </div>
+  </section>
 
-      <div class="feature">
-        <div class="feature-icon">💡</div>
-        <h3>Lifelong Knowledge</h3>
-        <p>Encouraging continuous learning and growth.</p>
-      </div>
+  <!-- ONLINE BOOK LIBRARY -->
+  <section class="section" id="books">
+    <h2>Our Online Book Library</h2>
 
+    <p>
+      Welcome to our educational library. Browse the learning
+      materials that we have selected and made available to visitors.
+    </p>
+
+    <div class="book-note">
+      <strong>Important information:</strong>
+      Only books deliberately added to our designated book library
+      are intended to appear here. We do not publish your entire
+      Google Drive.
     </div>
 
-    <!-- ONLINE BOOK LIBRARY -->
-    <section id="books" class="container">
-      <div class="panel library">
+    <iframe
+      class="library-frame"
+      src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
+      title="TR B. JUSTUS EDUCATION HUB Online Book Library"
+      loading="lazy">
+    </iframe>
 
-        <h2 class="section-title">📚 ONLINE BOOK LIBRARY</h2>
+    <p style="text-align:center; margin-top:18px;">
+      If the books do not appear above, use the button below.
+    </p>
 
-        <p>
-          Explore educational books and learning resources available
-          through TR B. JUSTUS EDUCATION HUB.
-        </p>
+    <p style="text-align:center;">
+      <a
+        class="btn btn-blue"
+        href="https://drive.google.com/drive/folders/1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX"
+        target="_blank"
+        rel="noopener noreferrer">
+        Open Book Library
+      </a>
+    </p>
 
-        <div class="library-note">
-          <strong>Our library:</strong>
-          Only educational resources placed in the dedicated
-          <strong>TR B. JUSTUS EDUCATION HUB BOOKS</strong> folder
-          are intended for display here.
-        </div>
+    <div class="book-note">
+      <strong>Need a copy of a learning resource?</strong>
+      Contact us using the details below to enquire about obtaining
+      a copy.
+    </div>
+  </section>
 
-        <iframe
-          src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
-          title="TR B. JUSTUS EDUCATION HUB Online Book Library"
-          loading="lazy">
-        </iframe>
+  <!-- ABOUT US -->
+  <section class="section" id="about">
+    <h2>About TR B. JUSTUS EDUCATION HUB</h2>
 
-        <div class="request-copy">
-          <h3>Would you like a copy of a book?</h3>
+    <h3>Who We Are</h3>
+    <p>
+      TR B. JUSTUS EDUCATION HUB is an educational resource platform
+      established to extend knowledge and make quality learning
+      materials accessible to learners, teachers and other people
+      who value education.
+    </p>
 
-          <p>
-            Contact us to enquire about obtaining an official copy
-            of an educational resource.
-          </p>
+    <p>
+      We recognise that education opens doors to opportunity.
+      Our aim is to support learning by connecting people with
+      useful books, educational information and learning resources.
+    </p>
 
-          <a
-            class="button"
-            href="https://wa.me/256758646051?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20obtaining%20a%20copy%20of%20a%20book."
-            target="_blank"
-            rel="noopener">
-            Request a Copy on WhatsApp
-          </a>
-        </div>
+    <h3>Our Vision</h3>
+    <p>
+      To become a trusted and accessible educational resource centre
+      that promotes knowledge, learning and educational opportunity
+      for everyone.
+    </p>
 
-      </div>
-    </section>
+    <h3>Our Mission</h3>
+    <p>
+      To provide and share quality educational resources that help
+      learners and teachers develop knowledge, skills and confidence,
+      regardless of their social or economic background.
+    </p>
 
-    <!-- ABOUT US -->
-    <section id="about" class="container">
-      <div class="panel">
+    <h3>Our Commitment</h3>
+    <p>
+      We are committed to making learning materials available to
+      people at different levels of education. We believe that a
+      learner's opportunity to gain knowledge should not be limited
+      simply because of the income of their family.
+    </p>
 
-        <h2 class="section-title">
-          About TR B. JUSTUS EDUCATION HUB
-        </h2>
+    <p>
+      Through this platform, we seek to encourage reading,
+      independent study, continuous learning and the responsible
+      use of educational materials.
+    </p>
 
-        <h3 class="subheading">Who We Are</h3>
+    <h3>Our Core Belief</h3>
+    <p>
+      Knowledge is a powerful tool for personal growth, community
+      development and a better future. Every learner deserves an
+      opportunity to learn and improve.
+    </p>
+  </section>
 
-        <p class="profile-text">
-          TR B. JUSTUS EDUCATION HUB is an educational platform
-          established with a commitment to extending quality knowledge,
-          excellent learning materials and meaningful educational
-          opportunities to learners at all levels. We believe education
-          is a foundation for personal growth, social development and
-          a brighter future.
-        </p>
+  <!-- OBJECTIVES -->
+  <section class="section" id="objectives">
+    <h2>Our Objectives</h2>
 
-        <h3 class="subheading">Our Vision</h3>
+    <p>TR B. JUSTUS EDUCATION HUB aims to:</p>
 
-        <p class="profile-text">
-          To become a trusted and accessible educational resource centre
-          that empowers learners, supports teachers and promotes
-          academic excellence, continuous learning and lifelong
-          knowledge acquisition.
-        </p>
+    <ol class="objectives">
+      <li>
+        Provide and share quality educational books and learning
+        materials.
+      </li>
+      <li>
+        Support learners at different levels of education with
+        useful learning resources.
+      </li>
+      <li>
+        Assist teachers and other educators in accessing materials
+        that support teaching and learning.
+      </li>
+      <li>
+        Encourage reading, independent study, critical thinking
+        and lifelong learning.
+      </li>
+      <li>
+        Promote fairer access to educational resources, including
+        for learners from low-income households.
+      </li>
+      <li>
+        Help people develop knowledge, skills, confidence and a
+        positive attitude towards education.
+      </li>
+      <li>
+        Encourage the responsible sharing and use of educational
+        materials.
+      </li>
+    </ol>
 
-        <h3 class="subheading">Our Mission</h3>
+    <div class="book-note">
+      <strong>Our promise:</strong>
+      To keep promoting education, sharing knowledge and supporting
+      the learning journey of every person we can reach.
+    </div>
+  </section>
 
-        <p class="profile-text">
-          Our mission is to make quality educational resources,
-          effective learning materials and valuable knowledge
-          accessible to learners from all backgrounds. We aim to
-          reduce barriers to learning by providing useful resources
-          that improve understanding, support academic performance
-          and encourage independent study.
-        </p>
+  <!-- CONTACT US -->
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
 
-        <h3 class="subheading">
-          Our Commitment to Equal Educational Opportunities
-        </h3>
+    <p style="text-align:center;">
+      Do you need educational resources, want to make an enquiry,
+      or have a suggestion? Contact TR B. JUSTUS EDUCATION HUB.
+    </p>
 
-        <p class="profile-text">
-          At TR B. JUSTUS EDUCATION HUB, we believe that a learner's
-          opportunity to acquire knowledge should not be determined
-          by the income level of their family. Every child, student,
-          teacher and lifelong learner deserves an opportunity to
-          access useful educational materials, develop their abilities
-          and work towards their full potential.
-        </p>
+    <div class="contact-box">
+      <h3>WhatsApp / Phone</h3>
+      <p>
+        <a href="https://wa.me/256758646051" target="_blank"
+           rel="noopener noreferrer">
+          +256 758 646 051
+        </a>
+      </p>
 
-        <p class="profile-text">
-          We are committed to promoting inclusive education by
-          improving access to learning resources for people from
-          different economic circumstances, locations and educational
-          backgrounds. Through this platform, we aspire to reduce
-          barriers to learning and contribute to a future in which
-          quality education is more accessible to everyone.
-        </p>
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:justubigabwarunga1994@gmail.com">
+          justubigabwarunga1994@gmail.com
+        </a>
+      </p>
 
-        <h3 class="subheading">Our Objectives</h3>
+      <p>
+        <a href="mailto:justubigabwarunga2025@gmail.com">
+          justubigabwarunga2025@gmail.com
+        </a>
+      </p>
 
-        <ol class="objectives">
-          <li>
-            To provide high-quality educational books, notes,
-            revision materials and other useful learning resources.
-          </li>
+      <p>
+        <a href="mailto:justubigabwarunga2026@gmail.com">
+          justubigabwarunga2026@gmail.com
+        </a>
+      </p>
 
-          <li>
-            To support learners at different educational levels
-            in improving their knowledge, skills and academic performance.
-          </li>
+      <p>
+        <a href="mailto:justubigabwarunga2027@gmail.com">
+          justubigabwarunga2027@gmail.com
+        </a>
+      </p>
 
-          <li>
-            To help teachers and educators access materials that
-            strengthen teaching and classroom learning.
-          </li>
+      <p style="margin-top:18px;">
+        <a class="btn" href="https://wa.me/256758646051"
+           target="_blank" rel="noopener noreferrer">
+          Message Us on WhatsApp
+        </a>
+      </p>
+    </div>
+  </section>
 
-          <li>
-            To encourage independent study, curiosity, creativity,
-            critical thinking and lifelong learning.
-          </li>
+  <!-- WEBSITE VISITOR COUNTER -->
+  <section class="visitor-box">
+    <h2>👥 Our Website Visitors</h2>
 
-          <li>
-            To promote equal access to educational opportunities,
-            particularly for learners from low-income households.
-          </li>
+    <p>
+      Thank you for visiting TR B. JUSTUS EDUCATION HUB!
+    </p>
 
-          <li>
-            To contribute to the development of knowledgeable,
-            skilled, confident and responsible individuals.
-          </li>
-        </ol>
+    <a href="https://librecounter.org/referer/show"
+       target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://librecounter.org/counter.svg"
+        referrerpolicy="unsafe-url"
+        alt="Website visitor counter">
+    </a>
 
-        <div class="belief">
-          <h3>Our Core Belief</h3>
+    <p>
+      Every visit helps us share knowledge and promote education.
+    </p>
 
-          <p>
-            Knowledge should be shared, learning should be encouraged,
-            and financial limitations should not prevent a willing
-            learner from pursuing education.
-          </p>
-
-          <br>
-
-          <h3>Our Promise</h3>
-
-          <p>
-            We are dedicated to making learning more accessible,
-            supporting educational excellence and helping learners
-            move towards a brighter future.
-          </p>
-        </div>
-
-        <div class="motto">
-          <h3>Our Motto</h3>
-          <p><strong>Education • Learning • Knowledge</strong></p>
-          <p>Empowering Every Learner, Regardless of Background.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-      <div class="panel contact">
-
-        <h2 class="section-title">Contact Us</h2>
-
-        <p>
-          We welcome learners, teachers, parents and education lovers
-          who share our commitment to quality education and lifelong
-          learning.
-        </p>
-
-        <p>
-          📱 <strong>WhatsApp / Phone:</strong>
-          <a href="https://wa.me/256758646051">
-            +256 758 646 051
-          </a>
-        </p>
-
-        <p>
-          📧 <a href="mailto:justubigabwarunga1994@gmail.com">
-            justubigabwarunga1994@gmail.com
-          </a>
-        </p>
-
-        <p>
-          📧 <a href="mailto:justubigabwarunga2025@gmail.com">
-            justubigabwarunga2025@gmail.com
-          </a>
-        </p>
-
-        <p>
-          📧 <a href="mailto:justubigabwarunga2026@gmail.com">
-            justubigabwarunga2026@gmail.com
-          </a>
-        </p>
-
-        <p>
-          📧 <a href="mailto:justubigabwarunga2027@gmail.com">
-            justubigabwarunga2027@gmail.com
-          </a>
-        </p>
-
-      </div>
-    </section
-
-  </main>
+    <p style="font-size:13px; color:#53657a;">
+      Tap the counter to access its statistics page.
+    </p>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     <h3>TR B. JUSTUS EDUCATION HUB</h3>
     <p>Education • Learning • Knowledge</p>
-    <p>Quality Education for Every Learner</p>
-    <p>© 2026 TJUSTUS EDUCATION HUB</p>
+    <p>Empowering Every Learner, Regardless of Background.</p>
+    <p>
+      &copy; 2026 TR B. JUSTUS EDUCATION HUB.
+      All rights reserved.
+    </p>
   </footer>
 
 </body>
-</html
+</html>
