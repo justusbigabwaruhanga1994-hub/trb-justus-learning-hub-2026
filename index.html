@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +6,20 @@
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
 
-  <meta name="description"
-        content="Access educational books, lesson notes, worksheets and learning materials from TR B. JUSTUS EDUCATION HUB.">
+  <meta name="description" content="TR B. JUSTUS EDUCATION HUB promotes access to quality education, excellent learning materials and educational opportunities for learners at all levels, regardless of family income.">
 
   <style>
+    :root {
+      --navy: #123c69;
+      --dark: #092c4c;
+      --blue: #0875cf;
+      --yellow: #ffdc00;
+      --light: #f4f7fb;
+      --pale-blue: #eef5ff;
+      --white: #ffffff;
+      --text: #263746;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -23,176 +32,289 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      line-height: 1.6;
-      background: #fff;
+      line-height: 1.7;
+      background: var(--light);
+      color: var(--text);
     }
 
     header {
-      background: #000;
-      color: #fff;
+      background: var(--navy);
+      color: var(--white);
       text-align: center;
-      padding: 24px 12px;
+      padding: 30px 15px;
+      border-bottom: 5px solid var(--yellow);
     }
 
     header h1 {
-      font-size: 26px;
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.3;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: var(--yellow);
+      font-size: 16px;
     }
 
     nav {
-      background: #222;
-      padding: 12px 8px;
+      background: var(--dark);
       text-align: center;
+      padding: 13px 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       display: inline-block;
-      color: #fff;
+      color: var(--white);
       text-decoration: none;
+      margin: 4px 12px;
       font-weight: bold;
-      margin: 5px 10px;
     }
 
     nav a:hover {
-      color: #ffdf00;
+      color: var(--yellow);
+    }
+
+    section {
+      scroll-margin-top: 65px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px;
     }
 
     .hero {
-      background: #ffdf00;
-      color: #111;
-      text-align: center;
-      padding: 50px 18px;
-    }
-
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 17px;
-    }
-
-    .section {
-      padding: 40px 18px;
+      background: linear-gradient(135deg, #ffffff, #e3f2ff);
+      padding: 55px 20px;
       text-align: center;
     }
 
-    .section h2 {
-      font-size: 26px;
-      margin-bottom: 14px;
-    }
-
-    .library {
-      background: #f5f5f5;
-    }
-
-    .library-content {
-      max-width: 1100px;
+    .hero-inner {
+      max-width: 850px;
       margin: auto;
     }
 
-    .library-description {
-      max-width: 750px;
-      margin: 0 auto 18px;
+    .hero h2 {
+      color: var(--navy);
+      font-size: clamp(28px, 5vw, 43px);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      margin-bottom: 12px;
+    }
+
+    .hero-slogan {
+      color: var(--navy);
+      font-weight: bold;
+      font-size: 19px;
+      margin-top: 18px;
     }
 
     .button {
       display: inline-block;
-      background: #000;
-      color: #fff;
-      padding: 12px 22px;
-      margin: 10px 5px;
-      border-radius: 6px;
-      text-decoration: none;
+      margin-top: 18px;
+      padding: 12px 23px;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
       font-weight: bold;
+      text-decoration: none;
     }
 
     .button:hover {
-      background: #444;
+      background: var(--navy);
     }
 
-    .drive-frame {
-      display: block;
-      width: 100%;
-      height: 650px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fff;
-      margin-top: 18px;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      padding: 25px 4%;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .notice {
+    .feature {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px #123c6910;
+    }
+
+    .feature-icon {
+      font-size: 34px;
+    }
+
+    .feature h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin: 5px 0;
+    }
+
+    .feature p {
       font-size: 14px;
-      color: #555;
-      margin-top: 14px;
     }
 
-    .contact-card {
-      max-width: 650px;
-      margin: 15px auto;
-      padding: 20px;
-      background: #fafafa;
-      border: 1px solid #ddd;
+    .panel {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 4px 15px #123c690d;
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(24px, 4vw, 32px);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .subheading {
+      color: var(--blue);
+      font-size: 20px;
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    .profile-text {
+      margin-bottom: 13px;
+    }
+
+    .objectives {
+      padding-left: 25px;
+      margin-top: 10px;
+    }
+
+    .objectives li {
+      padding: 5px 0;
+    }
+
+    .belief {
+      background: var(--pale-blue);
+      border-left: 5px solid var(--blue);
       border-radius: 8px;
+      padding: 18px;
+      margin-top: 22px;
+    }
+
+    .motto {
+      text-align: center;
+      background: var(--navy);
+      color: white;
+      border-radius: 12px;
+      padding: 23px 15px;
+      margin-top: 25px;
+    }
+
+    .motto h3 {
+      color: var(--yellow);
+      font-size: 24px;
+    }
+
+    .library {
+      text-align: center;
+    }
+
+    .library-note {
       text-align: left;
+      background: var(--pale-blue);
+      border-left: 5px solid var(--blue);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .library iframe {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #d5e2f0;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .request-copy {
+      background: #fff9d9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .request-copy h3 {
+      color: var(--navy);
+    }
+
+    .contact p {
+      margin: 12px 0;
       overflow-wrap: anywhere;
     }
 
-    .contact-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .contact-card p,
-    .contact-card li {
-      margin: 9px 0;
-    }
-
-    .contact-card a {
-      color: #b00000;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-card a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-card ul {
-      list-style: none;
+    .contact a {
+      color: var(--blue);
     }
 
     footer {
-      background: #d71920;
-      color: #fff;
+      background: var(--dark);
+      color: white;
       text-align: center;
-      padding: 22px 12px;
+      padding: 28px 15px;
+      border-top: 5px solid var(--yellow);
+    }
+
+    footer h3 {
+      color: var(--yellow);
+      font-size: 21px;
     }
 
     footer p {
-      margin: 4px 0;
+      margin-top: 5px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 21px;
+    @media (max-width: 800px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .panel {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 25px 10px;
       }
 
       nav a {
+        margin: 4px 7px;
         font-size: 14px;
-        margin: 5px 7px;
       }
 
-      .hero h2 {
-        font-size: 25px;
+      .features {
+        grid-template-columns: 1fr;
       }
 
-      .section h2 {
-        font-size: 23px;
+      .container {
+        padding: 25px 14px;
       }
 
-      .drive-frame {
-        height: 550px;
+      .panel {
+        padding: 18px;
+      }
+
+      .library iframe {
+        height: 600px;
       }
     }
   </style>
@@ -200,138 +322,301 @@
 
 <body>
 
-  <!-- WEBSITE HEADER -->
   <header>
     <h1>TR B. JUSTUS EDUCATION HUB</h1>
+    <p>Education • Learning • Knowledge • Opportunity</p>
   </header>
 
-  <!-- NAVIGATION -->
   <nav>
     <a href="#home">Home</a>
-    <a href="#library">Digital Library</a>
-    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <h2>TR B. JUSTUS EDUCATION HUB</h2>
-    <p>Educational materials for learners and teachers.</p>
-  </section>
+  <main>
 
-  <!-- GOOGLE DRIVE DIGITAL LIBRARY -->
-  <section class="section library" id="library">
-    <div class="library-content">
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
 
-      <h2>Our Digital Library</h2>
+        <h2>
+          Welcome to <span>TR B. JUSTUS EDUCATION HUB</span>
+        </h2>
 
-      <p class="library-description">
-        Browse the educational materials in our Google Drive library.
-        Open books, lesson notes, revision materials, worksheets,
-        PDF files and other resources available in the folder.
-      </p>
+        <p>
+          An online educational platform dedicated to extending
+          quality knowledge, excellent learning materials and
+          meaningful educational opportunities to learners at all levels.
+        </p>
 
-      <a
-        class="button"
-        href="https://drive.google.com/drive/folders/1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX"
-        target="_blank"
-        rel="noopener noreferrer">
-        Open All Library Files
-      </a>
+        <p>
+          We believe that every learner deserves an opportunity to learn,
+          grow and achieve their potential, regardless of their family's
+          income or financial circumstances.
+        </p>
 
-      <iframe
-        class="drive-frame"
-        src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#grid"
-        title="TR B. JUSTUS EDUCATION HUB Google Drive Library"
-        loading="lazy">
-      </iframe>
+        <p class="hero-slogan">
+          Quality Education for Every Learner
+        </p>
 
-      <p class="notice">
-        If the library does not appear above, tap
-        "Open All Library Files" to view the folder directly in Google Drive.
-      </p>
+        <a class="button" href="#books">Explore Our Book Library</a>
 
-      <p class="notice">
-        Only share educational materials you intend to make public.
-        Visitors can view or download files according to their
-        Google Drive permissions.
-      </p>
+      </div>
+    </section>
+
+    <!-- KEY FEATURES -->
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">📚</div>
+        <h3>Quality Resources</h3>
+        <p>Useful books and educational materials.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🎓</div>
+        <h3>All Learning Levels</h3>
+        <p>Resources for learners at different stages.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🌍</div>
+        <h3>Inclusive Learning</h3>
+        <p>Education for learners from all backgrounds.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💡</div>
+        <h3>Lifelong Knowledge</h3>
+        <p>Encouraging continuous learning and growth.</p>
+      </div>
 
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <h2>About Us</h2>
+    <!-- ONLINE BOOK LIBRARY -->
+    <section id="books" class="container">
+      <div class="panel library">
 
-    <p>
-      TR B. JUSTUS EDUCATION HUB supports learners,
-      teachers and education lovers by providing access
-      to educational materials and learning resources.
-    </p>
-  </section>
+        <h2 class="section-title">📚 ONLINE BOOK LIBRARY</h2>
 
-  <!-- CONTACT DETAILS -->
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
+        <p>
+          Explore educational books and learning resources available
+          through TR B. JUSTUS EDUCATION HUB.
+        </p>
 
-    <p>
-      For enquiries, educational materials and support,
-      contact us using the details below.
-    </p>
+        <div class="library-note">
+          <strong>Our library:</strong>
+          Only educational resources placed in the dedicated
+          <strong>TR B. JUSTUS EDUCATION HUB BOOKS</strong> folder
+          are intended for display here.
+        </div>
 
-    <div class="contact-card">
-      <h3>Phone Contacts</h3>
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
+          title="TR B. JUSTUS EDUCATION HUB Online Book Library"
+          loading="lazy">
+        </iframe>
 
-      <p>
-        <a href="tel:+256758646021">
-          +256 758 646 021
-        </a>
-      </p>
+        <div class="request-copy">
+          <h3>Would you like a copy of a book?</h3>
 
-      <p>
-        <a href="tel:+256785402125">
-          +256 785 402 125
-        </a>
-      </p>
+          <p>
+            Contact us to enquire about obtaining an official copy
+            of an educational resource.
+          </p>
 
-      <p>
-        <a href="tel:+97455485804">
-          +974 5548 5804
-        </a>
-      </p>
-    </div>
-
-    <div class="contact-card">
-      <h3>Email Addresses</h3>
-
-      <ul>
-        <li>
-          <a href="mailto:justusbigabwaruhanga1994@gmail.com">
-            justusbigabwaruhanga1994@gmail.com
+          <a
+            class="button"
+            href="https://wa.me/256758646051?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20obtaining%20a%20copy%20of%20a%20book."
+            target="_blank"
+            rel="noopener">
+            Request a Copy on WhatsApp
           </a>
-        </li>
+        </div>
 
-        <li>
-          <a href="mailto:justusbigabwaruhanga2025@gmail.com">
-            justusbigabwaruhanga2025@gmail.com
-          </a>
-        </li>
+      </div>
+    </section>
 
-        <li>
-          <a href="mailto:justusbigabwaruhanga2026@gmail.com">
-            justusbigabwaruhanga2026@gmail.com
+    <!-- ABOUT US -->
+    <section id="about" class="container">
+      <div class="panel">
+
+        <h2 class="section-title">
+          About TR B. JUSTUS EDUCATION HUB
+        </h2>
+
+        <h3 class="subheading">Who We Are</h3>
+
+        <p class="profile-text">
+          TR B. JUSTUS EDUCATION HUB is an educational platform
+          established with a commitment to extending quality knowledge,
+          excellent learning materials and meaningful educational
+          opportunities to learners at all levels. We believe education
+          is a foundation for personal growth, social development and
+          a brighter future.
+        </p>
+
+        <h3 class="subheading">Our Vision</h3>
+
+        <p class="profile-text">
+          To become a trusted and accessible educational resource centre
+          that empowers learners, supports teachers and promotes
+          academic excellence, continuous learning and lifelong
+          knowledge acquisition.
+        </p>
+
+        <h3 class="subheading">Our Mission</h3>
+
+        <p class="profile-text">
+          Our mission is to make quality educational resources,
+          effective learning materials and valuable knowledge
+          accessible to learners from all backgrounds. We aim to
+          reduce barriers to learning by providing useful resources
+          that improve understanding, support academic performance
+          and encourage independent study.
+        </p>
+
+        <h3 class="subheading">
+          Our Commitment to Equal Educational Opportunities
+        </h3>
+
+        <p class="profile-text">
+          At TR B. JUSTUS EDUCATION HUB, we believe that a learner's
+          opportunity to acquire knowledge should not be determined
+          by the income level of their family. Every child, student,
+          teacher and lifelong learner deserves an opportunity to
+          access useful educational materials, develop their abilities
+          and work towards their full potential.
+        </p>
+
+        <p class="profile-text">
+          We are committed to promoting inclusive education by
+          improving access to learning resources for people from
+          different economic circumstances, locations and educational
+          backgrounds. Through this platform, we aspire to reduce
+          barriers to learning and contribute to a future in which
+          quality education is more accessible to everyone.
+        </p>
+
+        <h3 class="subheading">Our Objectives</h3>
+
+        <ol class="objectives">
+          <li>
+            To provide high-quality educational books, notes,
+            revision materials and other useful learning resources.
+          </li>
+
+          <li>
+            To support learners at different educational levels
+            in improving their knowledge, skills and academic performance.
+          </li>
+
+          <li>
+            To help teachers and educators access materials that
+            strengthen teaching and classroom learning.
+          </li>
+
+          <li>
+            To encourage independent study, curiosity, creativity,
+            critical thinking and lifelong learning.
+          </li>
+
+          <li>
+            To promote equal access to educational opportunities,
+            particularly for learners from low-income households.
+          </li>
+
+          <li>
+            To contribute to the development of knowledgeable,
+            skilled, confident and responsible individuals.
+          </li>
+        </ol>
+
+        <div class="belief">
+          <h3>Our Core Belief</h3>
+
+          <p>
+            Knowledge should be shared, learning should be encouraged,
+            and financial limitations should not prevent a willing
+            learner from pursuing education.
+          </p>
+
+          <br>
+
+          <h3>Our Promise</h3>
+
+          <p>
+            We are dedicated to making learning more accessible,
+            supporting educational excellence and helping learners
+            move towards a brighter future.
+          </p>
+        </div>
+
+        <div class="motto">
+          <h3>Our Motto</h3>
+          <p><strong>Education • Learning • Knowledge</strong></p>
+          <p>Empowering Every Learner, Regardless of Background.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+      <div class="panel contact">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <p>
+          We welcome learners, teachers, parents and education lovers
+          who share our commitment to quality education and lifelong
+          learning.
+        </p>
+
+        <p>
+          📱 <strong>WhatsApp / Phone:</strong>
+          <a href="https://wa.me/256758646051">
+            +256 758 646 051
           </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+        </p>
+
+        <p>
+          📧 <a href="mailto:justubigabwarunga1994@gmail.com">
+            justubigabwarunga1994@gmail.com
+          </a>
+        </p>
+
+        <p>
+          📧 <a href="mailto:justubigabwarunga2025@gmail.com">
+            justubigabwarunga2025@gmail.com
+          </a>
+        </p>
+
+        <p>
+          📧 <a href="mailto:justubigabwarunga2026@gmail.com">
+            justubigabwarunga2026@gmail.com
+          </a>
+        </p>
+
+        <p>
+          📧 <a href="mailto:justubigabwarunga2027@gmail.com">
+            justubigabwarunga2027@gmail.com
+          </a>
+        </p>
+
+      </div>
+    </section
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 TR B. JUSTUS EDUCATION HUB</p>
-    <p>All rights reserved.</p>
+    <h3>TR B. JUSTUS EDUCATION HUB</h3>
+    <p>Education • Learning • Knowledge</p>
+    <p>Quality Education for Every Learner</p>
+    <p>© 2026 TJUSTUS EDUCATION HUB</p>
   </footer>
 
 </body>
-</html>
+</html
