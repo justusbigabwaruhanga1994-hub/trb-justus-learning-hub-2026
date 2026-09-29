@@ -7,6 +7,8 @@
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
 
+  <meta name="description" content="TR B. JUSTUS EDUCATION HUB provides educational materials for learners and teachers.">
+
   <style>
     * {
       box-sizing: border-box;
@@ -22,14 +24,14 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #222222;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background: #000000;
       color: #ffffff;
-      padding: 24px 15px;
       text-align: center;
+      padding: 25px 15px;
     }
 
     header h1 {
@@ -39,14 +41,14 @@
 
     nav {
       background: #222222;
-      padding: 13px 8px;
+      padding: 12px 8px;
       text-align: center;
     }
 
     nav a {
+      display: inline-block;
       color: #ffffff;
       text-decoration: none;
-      display: inline-block;
       margin: 5px 12px;
       font-weight: bold;
     }
@@ -58,8 +60,8 @@
     .hero {
       background: #ffdf00;
       color: #111111;
-      padding: 65px 20px;
       text-align: center;
+      padding: 65px 20px;
     }
 
     .hero h2 {
@@ -79,40 +81,73 @@
     }
 
     .section h2 {
-      margin-bottom: 15px;
-      font-size: 25px;
+      font-size: 26px;
+      margin-bottom: 18px;
     }
 
     .resources {
-      background: #f5f5f5;
       max-width: none;
+      background: #f5f5f5;
     }
 
-    .resources-content {
+    .resources-inner {
       max-width: 1000px;
       margin: auto;
     }
 
     .resource-message {
       background: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
       border: 1px solid #dddddd;
-      margin-top: 20px;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 15px;
     }
 
     .contact {
       background: #ffffff;
     }
 
-    .contact p {
-      margin: 8px 0;
+    .contact-intro {
+      margin-bottom: 25px;
     }
 
-    .contact a {
+    .contact-card {
+      max-width: 650px;
+      margin: 12px auto;
+      padding: 18px;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      background: #fafafa;
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #222222;
+    }
+
+    .contact-card a {
       color: #b00000;
       text-decoration: none;
-      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+    }
+
+    .email-list {
+      list-style: none;
+    }
+
+    .email-list li {
+      margin: 10px 0;
     }
 
     footer {
@@ -145,7 +180,11 @@
       }
 
       .section h2 {
-        font-size: 22px;
+        font-size: 23px;
+      }
+
+      .contact-card {
+        padding: 15px;
       }
     }
   </style>
@@ -153,12 +192,12 @@
 
 <body>
 
-  <!-- WEBSITE HEADER -->
+  <!-- HEADER -->
   <header>
     <h1>TR B. JUSTUS EDUCATION HUB</h1>
   </header>
 
-  <!-- NAVIGATION MENU -->
+  <!-- NAVIGATION -->
   <nav>
     <a href="#home">Home</a>
     <a href="#resources">Resources</a>
@@ -172,9 +211,9 @@
     <p>Educational materials for learners and teachers.</p>
   </section>
 
-  <!-- LEARNING RESOURCES -->
+  <!-- RESOURCES -->
   <section class="section resources" id="resources">
-    <div class="resources-content">
+    <div class="resources-inner">
       <h2>Learning Resources</h2>
 
       <div class="resource-message">
@@ -199,40 +238,68 @@
     </p>
   </section>
 
-  <!-- CONTACT DETAILS -->
+  <!-- CONTACT -->
   <section class="section contact" id="contact">
     <h2>Contact Us</h2>
 
-    <p>
-      <strong>TR B. JUSTUS EDUCATION HUB</strong>
+    <p class="contact-intro">
+      For enquiries, educational materials and support,
+      please contact us using the details below.
     </p>
 
-    <!-- Keep your original contact details here.
-         Replace the placeholders below with your
-         actual phone number and email address. -->
+    <!-- PHONE NUMBERS -->
+    <div class="contact-card">
+      <h3>Phone Contacts</h3>
 
-    <p>
-      Phone:
-      <a href="tel:YOUR_PHONE_NUMBER">
-        YOUR ORIGINAL PHONE NUMBER
-      </a>
-    </p>
+      <p>
+        <a href="tel:+256758646021">
+          +256 758 646 021
+        </a>
+      </p>
 
-    <p>
-      Email:
-      <a href="mailto:YOUR_EMAIL_ADDRESS">
-        YOUR ORIGINAL EMAIL ADDRESS
-      </a>
-    </p>
+      <p>
+        <a href="tel:+256785402125">
+          +256 785 402 125
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+97455485804">
+          +974 5548 5804
+        </a>
+      </p>
+    </div>
+
+    <!-- EMAIL ADDRESSES -->
+    <div class="contact-card">
+      <h3>Email Addresses</h3>
+
+      <ul class="email-list">
+        <li>
+          <a href="mailto:justusbigabwaruhanga1994@gmail.com">
+            justusbigabwaruhanga1994@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:justusbigabwaruhanga2025@gmail.com">
+            justusbigabwaruhanga2025@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:justusbigabwaruhanga2026@gmail.com">
+            justusbigabwaruhanga2026@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>
-      &copy; 2026 TR B. JUSTUS EDUCATION HUB
-    </p>
-
+    <p>&copy; 2026 TR B. JUSTUS EDUCATION HUB</p>
     <p>All rights reserved.</p>
   </footer>
 
