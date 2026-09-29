@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
-  <meta name="description" content="Educational books, notes, documents and learning materials from TR B. JUSTUS EDUCATION HUB.">
+
+  <meta name="description"
+        content="Access educational books, lesson notes, worksheets and learning materials from TR B. JUSTUS EDUCATION HUB.">
 
   <style>
     * {
@@ -20,9 +22,10 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
       line-height: 1.6;
+      background: #fff;
     }
 
     header {
@@ -38,7 +41,7 @@
 
     nav {
       background: #222;
-      padding: 12px 6px;
+      padding: 12px 8px;
       text-align: center;
     }
 
@@ -57,22 +60,27 @@
     .hero {
       background: #ffdf00;
       color: #111;
-      padding: 45px 18px;
       text-align: center;
+      padding: 50px 18px;
     }
 
     .hero h2 {
       font-size: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 17px;
     }
 
     .section {
-      padding: 35px 16px;
+      padding: 40px 18px;
       text-align: center;
     }
 
     .section h2 {
-      margin-bottom: 12px;
+      font-size: 26px;
+      margin-bottom: 14px;
     }
 
     .library {
@@ -84,40 +92,46 @@
       margin: auto;
     }
 
-    .drive-button {
+    .library-description {
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .button {
       display: inline-block;
-      margin: 18px 0;
-      padding: 12px 22px;
-      border-radius: 6px;
-      background: #111;
+      background: #000;
       color: #fff;
+      padding: 12px 22px;
+      margin: 10px 5px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .drive-button:hover {
+    .button:hover {
       background: #444;
     }
 
     .drive-frame {
+      display: block;
       width: 100%;
       height: 650px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      background: white;
-      margin-top: 10px;
+      background: #fff;
+      margin-top: 18px;
     }
 
     .notice {
       font-size: 14px;
-      margin-top: 12px;
       color: #555;
+      margin-top: 14px;
     }
 
     .contact-card {
       max-width: 650px;
-      margin: 14px auto;
-      padding: 18px;
+      margin: 15px auto;
+      padding: 20px;
       background: #fafafa;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -126,17 +140,18 @@
     }
 
     .contact-card h3 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .contact-card p,
     .contact-card li {
-      margin: 8px 0;
+      margin: 9px 0;
     }
 
     .contact-card a {
       color: #b00000;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .contact-card a:hover {
@@ -149,9 +164,13 @@
 
     footer {
       background: #d71920;
-      color: white;
+      color: #fff;
       text-align: center;
-      padding: 20px 10px;
+      padding: 22px 12px;
+    }
+
+    footer p {
+      margin: 4px 0;
     }
 
     @media (max-width: 600px) {
@@ -159,8 +178,17 @@
         font-size: 21px;
       }
 
+      nav a {
+        font-size: 14px;
+        margin: 5px 7px;
+      }
+
       .hero h2 {
         font-size: 25px;
+      }
+
+      .section h2 {
+        font-size: 23px;
       }
 
       .drive-frame {
@@ -172,53 +200,63 @@
 
 <body>
 
+  <!-- WEBSITE HEADER -->
   <header>
     <h1>TR B. JUSTUS EDUCATION HUB</h1>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="#home">Home</a>
-    <a href="#library">Library</a>
+    <a href="#library">Digital Library</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- HOME -->
   <section class="hero" id="home">
     <h2>TR B. JUSTUS EDUCATION HUB</h2>
     <p>Educational materials for learners and teachers.</p>
   </section>
 
-  <!-- GOOGLE DRIVE LIBRARY -->
+  <!-- GOOGLE DRIVE DIGITAL LIBRARY -->
   <section class="section library" id="library">
     <div class="library-content">
+
       <h2>Our Digital Library</h2>
 
-      <p>
-        Browse educational books, lesson notes, PDFs,
-        worksheets, Word documents and other learning materials.
+      <p class="library-description">
+        Browse the educational materials in our Google Drive library.
+        Open books, lesson notes, revision materials, worksheets,
+        PDF files and other resources available in the folder.
       </p>
 
-      <!-- REPLACE YOUR_FOLDER_ID BELOW WITH YOUR DRIVE FOLDER ID -->
       <a
-        class="drive-button"
-        href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID"
+        class="button"
+        href="https://drive.google.com/drive/folders/1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX"
         target="_blank"
         rel="noopener noreferrer">
-        Open Full Library in Google Drive
+        Open All Library Files
       </a>
 
       <iframe
         class="drive-frame"
-        src="https://drive.google.com/embeddedfolderview?id=YOUR_FOLDER_ID#grid"
+        src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#grid"
         title="TR B. JUSTUS EDUCATION HUB Google Drive Library"
         loading="lazy">
       </iframe>
 
       <p class="notice">
-        If the library does not appear above, use the Open Full Library
-        button. You may need to sign in to Google to access files that
-        are not publicly shared.
+        If the library does not appear above, tap
+        "Open All Library Files" to view the folder directly in Google Drive.
       </p>
+
+      <p class="notice">
+        Only share educational materials you intend to make public.
+        Visitors can view or download files according to their
+        Google Drive permissions.
+      </p>
+
     </div>
   </section>
 
@@ -233,18 +271,35 @@
     </p>
   </section>
 
-  <!-- CONTACTS -->
+  <!-- CONTACT DETAILS -->
   <section class="section" id="contact">
     <h2>Contact Us</h2>
 
-    <p>For enquiries and educational support, contact us below.</p>
+    <p>
+      For enquiries, educational materials and support,
+      contact us using the details below.
+    </p>
 
     <div class="contact-card">
       <h3>Phone Contacts</h3>
 
-      <p><a href="tel:+256758646021">+256 758 646 021</a></p>
-      <p><a href="tel:+256785402125">+256 785 402 125</a></p>
-      <p><a href="tel:+97455485804">+974 5548 5804</a></p>
+      <p>
+        <a href="tel:+256758646021">
+          +256 758 646 021
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+256785402125">
+          +256 785 402 125
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+97455485804">
+          +974 5548 5804
+        </a>
+      </p>
     </div>
 
     <div class="contact-card">
@@ -272,6 +327,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 TR B. JUSTUS EDUCATION HUB</p>
     <p>All rights reserved.</p>
