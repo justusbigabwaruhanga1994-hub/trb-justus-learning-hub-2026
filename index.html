@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#103b70">
 
   <title>TR B. JUSTUS EDUCATION HUB</title>
   <meta name="description" content="Educational books, learning materials and resources for learners, teachers and education lovers.">
-  <meta name="theme-color" content="#103b70">
 
   <style>
     * {
@@ -102,7 +102,6 @@
       margin: auto;
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
       gap: 8px;
     }
@@ -152,7 +151,7 @@
       margin-bottom: 12px;
     }
 
-    /* WELCOME BANNER */
+    /* WELCOME */
 
     .hero {
       background: linear-gradient(135deg, #103b70, #1976a8);
@@ -198,7 +197,7 @@
       color: white;
     }
 
-    /* SERVICE CARDS */
+    /* SERVICES */
 
     .card-grid {
       display: grid;
@@ -287,7 +286,7 @@
     .counter-box {
       text-align: center;
       background: #e5edf6;
-      padding: 25px 15px;
+      padding: 30px 15px;
       border-radius: 10px;
       margin-top: 20px;
     }
@@ -297,16 +296,23 @@
       margin-bottom: 8px;
     }
 
-    .counter-box img {
+    .counter-badge {
       display: inline-block;
+      margin: 15px auto;
+      min-height: 40px;
+    }
+
+    .counter-badge img {
+      display: block;
       max-width: 100%;
       height: auto;
-      margin: 12px 0;
+      margin: auto;
     }
 
     .counter-note {
       color: #526477;
       font-size: 13px;
+      margin-top: 10px;
     }
 
     /* FOOTER */
@@ -333,7 +339,7 @@
       font-size: 18px;
     }
 
-    /* PHONE DISPLAY */
+    /* MOBILE DISPLAY */
 
     @media (max-width: 600px) {
       header {
@@ -426,16 +432,13 @@
 
 <body>
 
-  <!-- WEBSITE HEADER -->
+  <!-- HEADER -->
 
   <header>
     <div class="header-content">
-
       <div class="header-text">
         <h1>TR B. JUSTUS EDUCATION HUB</h1>
-
         <p>Education • Learning • Knowledge • Opportunity</p>
-
         <p class="tagline">
           Empowering Every Learner, Regardless of Background.
         </p>
@@ -446,7 +449,6 @@
           src="254348.png"
           alt="Mr. Justus, founder of TR B. JUSTUS EDUCATION HUB">
       </div>
-
     </div>
   </header>
 
@@ -490,7 +492,6 @@
       <h2>What We Offer</h2>
 
       <div class="card-grid">
-
         <div class="service-card">
           <div class="service-icon">📚</div>
           <h3>Educational Books</h3>
@@ -517,7 +518,6 @@
             from different backgrounds.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -643,7 +643,6 @@
       </p>
 
       <div class="contact-box">
-
         <p>
           <strong>WhatsApp:</strong>
           <a href="https://wa.me/256758646051"
@@ -679,7 +678,6 @@
             justubigabwarunga2027@gmail.com
           </a>
         </p>
-
       </div>
 
       <p style="margin-top: 15px;">
@@ -691,27 +689,31 @@
       </p>
     </section>
 
-    <!-- VISITOR COUNTER -->
+    <!-- VISITOR COUNTER: DISPLAYED AT THE BOTTOM -->
 
-    <section class="counter-box">
+    <section class="counter-box" id="visitor-counter">
       <h2>Website Visitor Counter</h2>
 
       <p>
         Thank you for visiting TR B. JUSTUS EDUCATION HUB.
       </p>
 
-      <p>
-        Total page views recorded by the counter:
-      </p>
+      <p><strong>Website page views</strong></p>
 
-      <img
-        src="https://hits.sh/trb-justus-learning-hub-2026.svg?label=Website%20page%20views&color=blue"
-        alt="Website page-view counter"
-        loading="lazy">
+      <a
+        class="counter-badge"
+        href="https://hits.sh/justusbigabwaruhanga1994-hub.github.io/trb-justus-learning-hub-2026.svg?label=Website%20Visitors&color=blue"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="https://hits.sh/justusbigabwaruhanga1994-hub.github.io/trb-justus-learning-hub-2026.svg?label=Website%20Visitors&color=blue"
+          alt="Website page-view counter">
+      </a>
 
       <p class="counter-note">
-        This counter is provided by an external service. It counts page
-        views, which may include repeat visits by the same person.
+        This external counter displays page views, not necessarily
+        the number of different people. Its availability depends on
+        the external counter service.
       </p>
     </section>
 
