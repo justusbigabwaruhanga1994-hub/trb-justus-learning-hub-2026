@@ -1,244 +1,772 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TR B. Justus Education Hub: educational books, notes, revision guides and teaching resources.">
+<title>TR B. JUSTUS EDUCATION HUB</title>
 
-  <title>TR B. JUSTUS EDUCATION HUB</title>
+<style>
+:root {
+  --black: #111111;
+  --yellow: #ffcc00;
+  --red: #d71920;
+  --white: #ffffff;
+  --ink: #202020;
+  --muted: #606060;
+  --line: #dedede;
+  --light: #fffdf4;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f4f7fb;
-      color: #222;
-    }
+html { scroll-behavior: smooth; }
 
-    header {
-      background: #123c69;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--light);
+  line-height: 1.6;
+}
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
+a { color: inherit; }
+.wrap { width: min(1160px, 92%); margin: auto; }
 
-    header p {
-      font-size: 17px;
-    }
+/* BLACK UPPER SECTION */
+header {
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 5px solid var(--yellow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    nav {
-      background: #092c4c;
-      text-align: center;
-      padding: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.nav {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 0;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--white);
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.logo {
+  width: 54px;
+  height: 54px;
+  border: 3px solid var(--yellow);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: var(--white);
+}
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 45px 20px;
-    }
+.brand strong {
+  display: block;
+  font-size: clamp(17px, 2.2vw, 27px);
+  line-height: 1.1;
+}
 
-    .welcome {
-      text-align: center;
-      background: white;
-      margin-top: 20px;
-      border-radius: 12px;
-    }
+.brand small {
+  color: var(--yellow);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
 
-    h2 {
-      color: #123c69;
-      margin-bottom: 15px;
-    }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-    h3 {
-      color: #123c69;
-      margin-bottom: 10px;
-    }
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
 
-    .library {
-      text-align: center;
-      background: white;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
+nav a:hover { color: var(--yellow); }
 
-    .library iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 20px;
-      background: white;
-    }
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: var(--red);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
 
-    .notice {
-      margin-top: 15px;
-      padding: 15px;
-      background: #eef5ff;
-      border-radius: 8px;
-    }
+.btn:hover { filter: brightness(.92); }
+.btn.yellow { background: var(--yellow); color: var(--black); }
+.btn.dark { background: var(--black); color: var(--white); }
+.btn.outline { background: var(--white); color: var(--black); border-color: var(--black); }
+.btn.small { padding: 8px 12px; font-size: 13px; }
 
-    .contact {
-      background: white;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
+/* YELLOW MIDDLE / HERO SECTION */
+.hero {
+  padding: 58px 0 50px;
+  text-align: center;
+  background: var(--yellow);
+  color: var(--black);
+  border-bottom: 8px solid var(--red);
+}
 
-    .contact p {
-      margin: 10px 0;
-    }
+.eyebrow {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
 
-    footer {
-      background: #092c4c;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 20px;
-    }
+h1 {
+  font-size: clamp(30px, 5vw, 55px);
+  line-height: 1.12;
+  margin: 14px auto;
+  max-width: 950px;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
+.hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 850px;
+  margin: 0 auto 20px;
+}
 
-      nav a {
-        margin: 0 7px;
-        font-size: 14px;
-      }
+.slogan {
+  font-weight: 700;
+  font-style: italic;
+  margin: 18px auto 24px;
+}
 
-      section {
-        padding: 30px 15px;
-      }
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-      .library iframe {
-        height: 600px;
-      }
-    }
-  </style>
+/* GENERAL SECTIONS */
+section { padding: 42px 0; }
+
+.section-head {
+  text-align: center;
+  margin: 0 auto 25px;
+  max-width: 780px;
+}
+
+.section-head h2 {
+  font-size: clamp(25px, 3vw, 35px);
+  color: var(--black);
+  margin: 0 0 8px;
+}
+
+.section-head p { margin: 0; color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature {
+  border-radius: 13px;
+  padding: 23px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--yellow);
+}
+
+.feature:nth-child(even) { border-top-color: var(--red); }
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  border-radius: 10px;
+  background: #fff4bf;
+}
+
+.feature h3 { margin: 0 0 5px; color: var(--black); }
+.feature p { margin: 0; color: var(--muted); }
+
+/* SEARCH AND RESOURCE CARDS */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  background: var(--white);
+  font: inherit;
+  color: var(--ink);
+}
+
+.toolbar input { flex: 1; min-width: 200px; }
+.toolbar select { width: auto; min-width: 160px; }
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.resource {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 16px;
+  box-shadow: 0 4px 15px #0000000a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  border-bottom: 4px solid var(--yellow);
+}
+
+.resource:nth-child(even) { border-bottom-color: var(--red); }
+
+.resource-image {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.tag {
+  align-self: flex-start;
+  background: var(--black);
+  color: var(--yellow);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+.resource h3 { margin: 0; font-size: 18px; color: var(--black); }
+.resource p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+.resource-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.empty {
+  padding: 28px;
+  text-align: center;
+  border: 1px dashed #b9b9b9;
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--muted);
+  grid-column: 1 / -1;
+}
+
+/* LIBRARY AND QR PANELS */
+.library-section { background: #fff4bf; }
+
+.qr-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 22px;
+  box-shadow: 0 4px 15px #00000008;
+}
+
+.panel h3 { margin: 0 0 8px; color: var(--black); }
+.panel p { color: var(--muted); }
+
+label {
+  font-weight: 700;
+  font-size: 13px;
+  display: block;
+  margin: 12px 0 6px;
+}
+
+.qr-result {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fafafa;
+  border: 1px dashed #c9c9c9;
+  border-radius: 10px;
+  padding: 18px;
+  gap: 12px;
+}
+
+#qrcode img, #qrcode canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.notice {
+  font-size: 13px;
+  background: #fff4bf;
+  border-left: 4px solid var(--red);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* RED LOWER SECTION */
+footer {
+  background: var(--red);
+  color: var(--white);
+  padding: 28px 0;
+  margin-top: 20px;
+  border-top: 6px solid var(--black);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-inner p { margin: 4px 0; font-size: 13px; }
+
+/* MOBILE FRIENDLY */
+@media(max-width: 800px) {
+  .nav { align-items: flex-start; flex-direction: column; }
+  nav { gap: 12px; }
+  .grid, .qr-layout { grid-template-columns: 1fr; }
+  .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero { padding-top: 40px; }
+}
+
+@media(max-width: 520px) {
+  .resource-grid { grid-template-columns: 1fr; }
+  .feature { flex-direction: column; gap: 12px; }
+  .toolbar select { width: 100%; }
+  .resource-image { height: 230px; }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>TR B. JUSTUS EDUCATION HUB</h1>
-    <p>Education • Learning • Knowledge • Opportunity</p>
-  </header>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <span class="logo">📘</span>
+      <span>
+        <strong>TR B. JUSTUS</strong>
+        <small>EDUCATION HUB</small>
+      </span>
+    </a>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#books">Books</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#resources">Resources</a>
+      <a href="#library">Library</a>
+      <a href="#qr">QR Codes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section id="home" class="welcome">
-    <h2>Welcome to TR B. JUSTUS EDUCATION HUB</h2>
+<main>
 
-    <p>
-      Welcome to the TR B. JUSTUS EDUCATION HUB, an online platform
-      dedicated to supporting learning through educational books and
-      learning materials.
-    </p>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="eyebrow">Learn • Teach • Grow</div>
+    <h1>Empowering Learners, Strengthening Communities</h1>
+    <p>Discover educational books, lesson notes, revision guides, worksheets and teaching resources for primary, secondary and other levels.</p>
+    <div class="slogan">“Education is the strongest weapon to change the world.”</div>
+    <div class="actions">
+      <a class="btn dark" href="#resources">Explore Resources</a>
+      <a class="btn outline" href="#about">About the Hub</a>
+    </div>
+  </div>
+</section>
 
-    <br>
+<section id="about">
+  <div class="wrap grid">
+    <article class="feature">
+      <div class="feature-icon">📚</div>
+      <div>
+        <h3>Explore Our Knowledge</h3>
+        <p>Find organised learning resources across subjects and education levels. Search and filter materials quickly.</p>
+      </div>
+    </article>
 
-    <p>
-      Our aim is to make useful educational resources easier to access
-      for learners, teachers and education lovers.
-    </p>
-  </section>
+    <article class="feature">
+      <div class="feature-icon">🤝</div>
+      <div>
+        <h3>Learning for Everyone</h3>
+        <p>Support independent study, classroom teaching and collaborative learning through accessible educational materials.</p>
+      </div>
+    </article>
 
-  <section id="books" class="library">
+    <article class="feature">
+      <div class="feature-icon">▦</div>
+      <div>
+        <h3>Scan a QR Code</h3>
+        <p>Scan a resource QR code with a phone camera to open the shared learning material.</p>
+      </div>
+    </article>
 
-    <h2>📚 ONLINE BOOK LIBRARY</h2>
+    <article class="feature">
+      <div class="feature-icon">📄</div>
+      <div>
+        <h3>Free Learning Materials</h3>
+        <p>Access educational notes, worksheets, lesson plans and study guides for learners and teachers.</p>
+      </div>
+    </article>
+  </div>
+</section>
 
-    <p>
-      Browse the educational books and learning resources available
-      in our library.
-    </p>
-
-    <div class="notice">
-      📖 Only educational resources placed in the dedicated
-      <strong>TR B. JUSTUS EDUCATION HUB BOOKS</strong> folder
-      are intended for this library.
+<section id="resources">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Learning Resources</h2>
+      <p>Explore educational photos, books, lesson notes, worksheets and other learning materials.</p>
     </div>
 
-    <iframe
-      src="https://drive.google.com/embeddedfolderview?id=1LGmsehXWA0PXCS8-MQoSv2srNFB8vxGX#list"
-      allow="autoplay">
-    </iframe>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search by title, subject or keyword..." aria-label="Search resources">
 
-  </section>
+      <select id="level" aria-label="Filter by education level">
+        <option value="">All education levels</option>
+        <option>Nursery</option>
+        <option>Primary</option>
+        <option>Secondary</option>
+        <option>Teacher Resources</option>
+        <option>Other</option>
+      </select>
 
-  <section id="about" class="welcome">
+      <select id="subject" aria-label="Filter by subject">
+        <option value="">All subjects</option>
+        <option>English</option>
+        <option>Mathematics</option>
+        <option>Science</option>
+        <option>Social Studies</option>
+        <option>Other</option>
+      </select>
+    </div>
 
-    <h2>About TR B. JUSTUS EDUCATION HUB</h2>
+    <div id="resourceGrid" class="resource-grid"></div>
+  </div>
+</section>
 
-    <p>
-      TR B. JUSTUS EDUCATION HUB is an educational platform created
-      to provide access to useful learning materials and educational
-      resources.
-    </p>
+<section id="library" class="library-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How the Digital Library Works</h2>
+      <p>Keep your original files in Google Drive and add the individual resources you want to publish.</p>
+    </div>
 
-    <br>
+    <div class="grid">
+      <article class="panel">
+        <h3>1. Upload to Google Drive</h3>
+        <p>Upload your PDF, document or learning material. Use a clear name, such as “Primary 4 Mathematics - Fractions”.</p>
+      </article>
 
-    <p>
-      The platform supports learners, teachers and education lovers
-      by bringing learning resources together in one accessible
-      online location.
-    </p>
+      <article class="panel">
+        <h3>2. Allow free viewing</h3>
+        <p>For resources you want to share publicly, set General access to Anyone with the link - Viewer.</p>
+      </article>
 
-  </section>
+      <article class="panel">
+        <h3>3. Add it to the website</h3>
+        <p>Add each resource's title, level, subject, description and share link to the resource list in index.html.</p>
+      </article>
 
-  <section id="contact" class="contact">
+      <article class="panel">
+        <h3>4. Make a QR code</h3>
+        <p>Generate a QR code from a resource link. Test it with a phone before printing.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <h2>Contact Us</h2>
+<section id="qr">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Free QR Code Maker</h2>
+      <p>Create a QR code that opens your shared learning resource.</p>
+    </div>
 
-    <p>📱 WhatsApp / Phone: +256 758 646 051</p>
+    <div class="qr-layout">
+      <div class="panel">
+        <h3>Enter your resource link</h3>
+        <p>Paste the Google Drive share link for the book, PDF or document.</p>
 
-    <p>📧 Email: justubigabwarunga1994@gmail.com</p>
+        <form id="qrForm">
+          <label for="qrTitle">Resource name (optional)</label>
+          <input id="qrTitle" placeholder="e.g. Primary 5 English Notes">
 
-    <p>📧 Email: justubigabwarunga2025@gmail.com</p>
+          <label for="driveUrl">Resource share link</label>
+          <input id="driveUrl" type="url" placeholder="https://drive.google.com/..." required>
 
-    <p>📧 Email: justubigabwarunga2026@gmail.com</p>
+          <div style="margin-top:15px">
+            <button class="btn" type="submit">Generate QR Code</button>
+          </div>
+        </form>
 
-    <p>📧 Email: justubigabwarunga2027@gmail.com</p>
+        <p class="notice">Only share files you intend to make public. Viewer access allows reading but does not grant permission to edit your GitHub website.</p>
+      </div>
 
-  </section>
+      <div class="panel">
+        <h3>Your QR code</h3>
+        <div class="qr-result">
+          <div id="qrcode"></div>
+          <p id="qrHint">Your QR code will appear here.</p>
+          <a id="downloadQr" class="btn dark small" style="display:none" download="tr-b-justus-resource-qr.png">Download QR as PNG</a>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Test the QR code with your phone before printing it.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>About TR B. Justus Education Hub</h2>
+      <p>A shared home for educational publications, school information and learning materials.</p>
+    </div>
 
-    <strong>TR B. JUSTUS EDUCATION HUB</strong>
+    <div class="panel" style="text-align:center;max-width:800px;margin:auto">
+      <h3>Education is the strongest weapon to change the world.</h3>
+      <p>We aim to help learners, teachers and education communities find useful learning materials across different education levels.</p>
+      <p><strong>Contact:</strong> Add your preferred phone number and email address here before publishing.</p>
+    </div>
+  </div>
+</section>
 
-    <p>Education • Learning • Knowledge</p>
+</main>
 
-    <p>© 2026 TR B. JUSTUS EDUCATION HUB</p>
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <strong>TR B. JUSTUS EDUCATION HUB</strong>
+      <p>“Education is the strongest weapon to change the world.”</p>
+    </div>
+    <p>Educational resources • Learning for everyone</p>
+    <p>© <span id="year"></span> TR B. Justus Education Hub</p>
+  </div>
+</footer>
 
-  </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+/*
+HOW TO ADD A RESOURCE:
+Copy one object and add it inside the resources array.
+Separate multiple objects with commas.
+
+For a book or PDF:
+{
+  title: "Primary 4 Mathematics - Fractions",
+  level: "Primary",
+  subject: "Mathematics",
+  description: "Notes and practice questions on fractions.",
+  url: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+}
+
+For an image in the same folder as index.html:
+{
+  title: "My Educational Photo",
+  level: "Other",
+  subject: "Other",
+  description: "Educational resource photograph.",
+  image: "my-photo.jpg",
+  url: "my-photo.jpg"
+}
+*/
+
+const resources = [
+  {
+    title: "TR B. Justus Education Hub",
+    level: "Other",
+    subject: "Other",
+    description: "Welcome to our educational resource library.",
+    image: "Screenshot_20260927-140018.jpg",
+    url: "Screenshot_20260927-140018.jpg"
+  }
+
+  // Add future books and notes here, separated by commas.
+];
+
+const grid = document.getElementById("resourceGrid");
+const searchInput = document.getElementById("search");
+const levelInput = document.getElementById("level");
+const subjectInput = document.getElementById("subject");
+
+function renderResources() {
+  const q = searchInput.value.trim().toLowerCase();
+  const level = levelInput.value;
+  const subject = subjectInput.value;
+
+  const filtered = resources.filter(r =>
+    (!q || [r.title, r.level, r.subject, r.description]
+      .join(" ").toLowerCase().includes(q)) &&
+    (!level || r.level === level) &&
+    (!subject || r.subject === subject)
+  );
+
+  grid.innerHTML = "";
+
+  if (!filtered.length) {
+    grid.innerHTML =
+      '<div class="empty"><strong>No materials found.</strong><br>Try another search or filter.</div>';
+    return;
+  }
+
+  filtered.forEach(r => {
+    const card = document.createElement("article");
+    card.className = "resource";
+
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = (r.level || "Resource") + " • " + (r.subject || "Other");
+
+    const title = document.createElement("h3");
+    title.textContent = r.title;
+
+    const desc = document.createElement("p");
+    desc.textContent = r.description || "Open this educational resource.";
+
+    if (r.image) {
+      const img = document.createElement("img");
+      img.className = "resource-image";
+      img.src = r.image;
+      img.alt = r.title;
+      img.loading = "lazy";
+      img.onerror = () => {
+        img.alt = "Image could not be loaded. Check the image filename.";
+        img.style.display = "none";
+      };
+      card.appendChild(img);
+    }
+
+    const actions = document.createElement("div");
+    actions.className = "resource-actions";
+
+    const open = document.createElement("a");
+    open.className = "btn small";
+    open.href = r.url;
+    open.target = "_blank";
+    open.rel = "noopener";
+    open.textContent = r.image ? "View Photo" : "Read / Open";
+
+    const qr = document.createElement("button");
+    qr.className = "btn yellow small";
+    qr.type = "button";
+    qr.textContent = "Make QR";
+
+    qr.addEventListener("click", () => {
+      document.getElementById("qrTitle").value = r.title;
+      document.getElementById("driveUrl").value =
+        new URL(r.url, window.location.href).href;
+      document.getElementById("qr").scrollIntoView({ behavior: "smooth" });
+    });
+
+    actions.append(open, qr);
+    card.append(tag, title, desc, actions);
+    grid.appendChild(card);
+  });
+}
+
+[searchInput, levelInput, subjectInput].forEach(el =>
+  el.addEventListener("input", renderResources)
+);
+
+renderResources();
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("qrForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const url = document.getElementById("driveUrl").value.trim();
+  const title = document.getElementById("qrTitle").value.trim();
+  const qrBox = document.getElementById("qrcode");
+  const hint = document.getElementById("qrHint");
+  const download = document.getElementById("downloadQr");
+
+  if (!/^https?:\/\//i.test(url)) {
+    alert("Please enter a valid resource link.");
+    return;
+  }
+
+  qrBox.innerHTML = "";
+  download.style.display = "none";
+  hint.textContent = title
+    ? "QR code for: " + title
+    : "Scan to open the shared resource.";
+
+  if (typeof QRCode === "undefined") {
+    hint.textContent =
+      "QR library could not load. Check your internet connection and try again.";
+    return;
+  }
+
+  new QRCode(qrBox, {
+    text: url,
+    width: 220,
+    height: 220,
+    colorDark: "#111111",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  setTimeout(() => {
+    const canvas = qrBox.querySelector("canvas");
+    const img = qrBox.querySelector("img");
+
+    if (canvas) {
+      download.href = canvas.toDataURL("image/png");
+      download.style.display = "inline-flex";
+    } else if (img) {
+      download.href = img.src;
+      download.style.display = "inline-flex";
+    }
+  }, 300);
+});
+</script>
 
 </body>
 </html>
